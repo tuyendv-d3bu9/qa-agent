@@ -1,0 +1,1 @@
+Hôm nay ngày 6/11, thì Leader của tôi nói rằng có thể mua hàng ở Nhật Bản

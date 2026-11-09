@@ -1,0 +1,377 @@
+{
+  "project": "QA Analyst Clarification Gate",
+  "source_file": "OUTPUT/questions_for_clarification.md",
+  "total_questions": 28,
+  "resolved_count": 0,
+  "unresolved_count": 28,
+  "gate_passed": false,
+  "created_at": "2026-11-06T14:34:07.449Z",
+  "last_checked_at": "2026-11-06T14:34:12.953Z",
+  "questions": [
+    {
+      "id": "Q-D01-01",
+      "d_code": "D01",
+      "question": "Ngoài 2 loại mã giảm giá tiền hàng (% và số tiền cố định), hệ thống có hỗ trợ loại mã miễn phí hoặc giảm phí vận chuyển (Freeship) tại ô nhập này không?",
+      "options": [
+        "A. Có hỗ trợ mã Freeship",
+        "B. Không hỗ trợ mã Freeship (chỉ hỗ trợ 2 loại mã giảm giá tiền hàng)"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D02-01",
+      "d_code": "D02",
+      "question": "Mã giảm giá theo tỷ lệ phần trăm (%) có áp dụng mức giảm tối đa (trần giảm) không?",
+      "options": [
+        "A. Có trần giảm tối đa (cấu hình theo từng mã cụ thể)",
+        "B. Không áp dụng trần giảm (giảm theo đúng tỷ lệ % trên tổng tiền hàng)"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D03-01",
+      "d_code": "D03",
+      "question": "Giá trị đơn hàng tối thiểu quy định của mã được so sánh dựa trên cơ sở nào?",
+      "options": [
+        "A. Tạm tính tiền hàng (Subtotal - chưa bao gồm phí vận chuyển)",
+        "B. Tổng tiền đơn hàng (đã bao gồm phí vận chuyển)"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D03-02",
+      "d_code": "D03",
+      "question": "Điều kiện \"đạt giá trị tối thiểu quy định\" được hiểu theo toán tử so sánh nào?",
+      "options": [
+        "A. Lớn hơn hoặc bằng (>= giá trị tối thiểu quy định)",
+        "B. Lớn hơn hẳn (> giá trị tối thiểu quy định)"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D04-01",
+      "d_code": "D04",
+      "question": "Ngày hết hạn của mã giảm giá được tính hiệu lực đến thời điểm nào trong ngày?",
+      "options": [
+        "A. Đến 23:59:59 của ngày hết hạn",
+        "B. Đến 00:00:00 của ngày hết hạn"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D04-02",
+      "d_code": "D04",
+      "question": "Múi giờ chuẩn được hệ thống sử dụng để kiểm tra ngày giờ hết hạn của mã là gì?",
+      "options": [
+        "A. Múi giờ Việt Nam (GMT+7)",
+        "B. Múi giờ máy chủ quốc tế (UTC / GMT+0)"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D05-01",
+      "d_code": "D05",
+      "question": "Hệ thống có giới hạn tổng số lượt sử dụng tối đa trên toàn sàn đối với một mã giảm giá không?",
+      "options": [
+        "A. Có giới hạn tổng lượt dùng toàn hệ thống (hết lượt thì không dùng được nữa)",
+        "B. Không giới hạn tổng lượt dùng (chỉ phụ thuộc vào hạn sử dụng)"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D06-01",
+      "d_code": "D06",
+      "question": "Một tài khoản khách hàng được phép áp dụng thành công một mã giảm giá tối đa bao nhiêu lần?",
+      "options": [
+        "A. Tối đa 1 lần duy nhất cho mỗi tài khoản khách hàng",
+        "B. Được dùng nhiều lần miễn là mã còn hạn và còn tổng lượt dùng"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D07-01",
+      "d_code": "D07",
+      "question": "Khách vãng lai (Guest) có được nhập và áp dụng mã giảm giá tại trang Thanh toán trước khi đăng nhập không?",
+      "options": [
+        "A. Bắt buộc phải đăng nhập tài khoản trước mới được nhập và áp dụng mã",
+        "B. Cho phép nhập áp dụng thử để xem số tiền giảm, nhưng khi bấm Đặt hàng thì bắt buộc đăng nhập"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D08-01",
+      "d_code": "D08",
+      "question": "Phạm vi áp dụng của mã giảm giá có giới hạn theo danh mục/sản phẩm cụ thể không?",
+      "options": [
+        "A. Áp dụng cho toàn bộ sản phẩm trong giỏ hàng",
+        "B. Có thể áp dụng riêng cho từng danh mục sản phẩm cụ thể (sản phẩm ngoài danh mục không được giảm)"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D09-01",
+      "d_code": "D09",
+      "question": "Một đơn hàng được phép áp dụng đồng thời tối đa bao nhiêu mã giảm giá?",
+      "options": [
+        "A. Tối đa 1 mã giảm giá duy nhất trên một đơn hàng",
+        "B. Cho phép áp dụng nhiều mã nếu khác loại mã"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D09-02",
+      "d_code": "D09",
+      "question": "Khi đã áp dụng thành công mã A, nếu khách hàng nhập tiếp mã B và bấm Áp dụng thì hệ thống xử lý thế nào?",
+      "options": [
+        "A. Tự động ghi đè mã mới thay thế mã cũ nếu mã mới hợp lệ",
+        "B. Báo lỗi yêu cầu người dùng phải gỡ mã cũ trước khi nhập mã mới"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D10-01",
+      "d_code": "D10",
+      "question": "Ký tự của mã giảm giá khi nhập vào có phân biệt chữ hoa và chữ thường (Case-sensitive) không?",
+      "options": [
+        "A. Không phân biệt hoa/thường (hệ thống tự động chuyển đổi thành chữ in hoa)",
+        "B. Phân biệt chính xác chữ in hoa và chữ in thường"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D10-02",
+      "d_code": "D10",
+      "question": "Khi người dùng nhập hoặc dán mã có khoảng trắng thừa ở đầu hoặc cuối chuỗi, hệ thống xử lý thế nào?",
+      "options": [
+        "A. Tự động cắt bỏ khoảng trắng thừa (auto-trim) trước khi kiểm tra mã",
+        "B. Giữ nguyên chuỗi nhập và báo lỗi mã không hợp lệ"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D11-01",
+      "d_code": "D11",
+      "question": "Khi mã giảm theo tỷ lệ % sinh ra số tiền giảm có phần lẻ, hệ thống áp dụng quy tắc làm tròn nào cho tiền tệ VND?",
+      "options": [
+        "A. Làm tròn số học đến hàng đơn vị 1đ",
+        "B. Làm tròn xuống (Floor) đến hàng nghìn 1.000đ",
+        "C. Làm tròn số học đến hàng nghìn 1.000đ"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D12-01",
+      "d_code": "D12",
+      "question": "Đối với mã giảm số tiền cố định, nếu giá trị giảm lớn hơn tạm tính tiền hàng của giỏ hàng thì hệ thống xử lý thế nào?",
+      "options": [
+        "A. Tiền giảm tối đa bằng tạm tính tiền hàng (tiền hàng sau giảm về 0đ)",
+        "B. Báo lỗi không cho áp dụng mã vì giá trị đơn hàng chưa đủ"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D13-01",
+      "d_code": "D13",
+      "question": "Khi áp dụng mã không thành công, hệ thống hiển thị thông báo lỗi chung hay tách biệt theo từng nguyên nhân cụ thể?",
+      "options": [
+        "A. Tách biệt thông báo lỗi theo nguyên nhân (Hết hạn, Chưa đủ đơn tối thiểu, Hết lượt dùng, Mã không tồn tại)",
+        "B. Dùng chung một thông báo lỗi \"Mã không hợp lệ hoặc hết hạn\""
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D14-01",
+      "d_code": "D14",
+      "question": "Lượt sử dụng của mã giảm giá được hệ thống trừ chính thức vào thời điểm nào?",
+      "options": [
+        "A. Trừ chính thức ngay khi người dùng bấm nút Đặt hàng thành công",
+        "B. Tạm giữ lượt khi bấm Áp dụng mã thành công và trừ chính thức khi Đặt hàng thành công"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D15-01",
+      "d_code": "D15",
+      "question": "Khi đơn hàng có áp dụng mã bị khách hàng hủy hoặc thanh toán trực tuyến qua thẻ thất bại, lượt dùng mã có được hoàn lại không?",
+      "options": [
+        "A. Tự động hoàn lại lượt dùng mã cho khách hàng",
+        "B. Không hoàn lại lượt dùng mã"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D16-01",
+      "d_code": "D16",
+      "question": "Sau khi áp mã thành công, nếu khách hàng quay lại giỏ hàng sửa số lượng làm giá trị đơn tụt xuống dưới mức đơn tối thiểu thì hệ thống xử lý thế nào?",
+      "options": [
+        "A. Tự động hủy áp dụng mã và thông báo đơn hàng không còn đủ điều kiện hưởng ưu đãi",
+        "B. Giữ nguyên mã đã áp dụng cho đến khi khách bấm Đặt hàng mới kiểm tra lại"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D17-01",
+      "d_code": "D17",
+      "question": "Sau khi áp dụng mã thành công, khách hàng có thể chủ động gỡ bỏ mã giảm giá khỏi đơn hàng không?",
+      "options": [
+        "A. Có nút hoặc biểu tượng gỡ mã, khi bấm vào thì gỡ mã và tính lại tổng tiền ban đầu",
+        "B. Không có chức năng chủ động gỡ mã"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D18-01",
+      "d_code": "D18",
+      "question": "Khi mã chỉ còn 1 lượt dùng duy nhất và có 2 khách hàng cùng bấm Đặt hàng tại cùng một thời điểm, hệ thống xử lý thế nào?",
+      "options": [
+        "A. Đơn hàng nào ghi nhận trước tại máy chủ sẽ áp dụng thành công, đơn hàng sau báo lỗi mã đã hết lượt",
+        "B. Giữ chỗ (reserve) lượt dùng ngay tại thời điểm khách bấm Áp dụng thành công"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D19-01",
+      "d_code": "D19",
+      "question": "Nếu khách hàng đã áp mã thành công tại trang Thanh toán nhưng trước khi bấm Đặt hàng mà mã bị hết hạn hoặc bị Admin vô hiệu hóa, hệ thống xử lý thế nào?",
+      "options": [
+        "A. Kiểm tra lại tại thời điểm bấm Đặt hàng, từ chối tạo đơn và thông báo mã không còn hiệu lực",
+        "B. Vẫn cho phép hoàn tất đơn hàng vì đã áp dụng thành công trước đó"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D20-01",
+      "d_code": "D20",
+      "question": "Tiền giảm giá của mã (cả % và số tiền cố định) được giảm trừ vào thành phần nào của đơn hàng?",
+      "options": [
+        "A. Chỉ giảm trừ vào tiền hàng (Subtotal), không giảm trừ vào phí vận chuyển",
+        "B. Giảm trừ vào tổng giá trị đơn hàng (bao gồm cả tiền hàng và phí vận chuyển)"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D21-01",
+      "d_code": "D21",
+      "question": "Hệ thống có cơ chế giới hạn số lần nhập mã sai liên tiếp (Rate limit / Brute-force protection) để ngăn chặn bot dò mã không?",
+      "options": [
+        "A. Khóa tạm thời tính năng nhập mã trong 5 phút sau 5 lần nhập sai liên tiếp",
+        "B. Không giới hạn số lần nhập mã sai"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D22-01",
+      "d_code": "D22",
+      "question": "Khi khách hàng bấm nút \"Áp dụng\", hệ thống có hiển thị trạng thái chờ (loading) và vô hiệu hóa nút để chặn thao tác bấm đúp liên tục không?",
+      "options": [
+        "A. Có hiển thị spinner/loading và vô hiệu hóa nút Áp dụng trong khi chờ API phản hồi",
+        "B. Không vô hiệu hóa nút Áp dụng"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-D23-01",
+      "d_code": "D23",
+      "question": "Sau khi đặt hàng thành công, thông tin mã giảm giá và số tiền được giảm có được lưu trữ và hiển thị trong chi tiết đơn hàng cùng email xác nhận đơn không?",
+      "options": [
+        "A. Có lưu vết đầy đủ mã giảm giá, số tiền được giảm và hiển thị trong chi tiết đơn hàng, lịch sử đơn và email xác nhận",
+        "B. Chỉ lưu và hiển thị tổng số tiền thanh toán cuối cùng"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    },
+    {
+      "id": "Q-X01-01",
+      "d_code": "X01",
+      "question": "Tệp chat.md ghi nhận thông tin Leader nói có thể mua hàng ở Nhật Bản, trong khi ShopGo.md quy định người dùng cuối tại Việt Nam, tiền tệ VNĐ. Hệ thống có hỗ trợ mua và giao hàng sang Nhật Bản không?",
+      "options": [
+        "A. Không hỗ trợ, chỉ phục vụ khách mua hàng và giao hàng tại Việt Nam với đơn vị tiền tệ VNĐ",
+        "B. Có hỗ trợ mua hàng tại Nhật Bản và cần bổ sung đặc tả chuyển đổi ngoại tệ"
+      ],
+      "status": "UNRESOLVED",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null
+    }
+  ]
+}
