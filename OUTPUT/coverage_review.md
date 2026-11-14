@@ -57,7 +57,7 @@ Tổng Góc 1: 29 dòng; COVER 18, MOT_PHAN 6, CHUA_COVER 5.
 | Ngoài danh sách | 0 | 0,0% |
 | Tổng | 33 | 100% |
 
-Ghi chú: tỉ lệ làm tròn 1 chữ số thập phân theo phần dư lớn nhất để tổng đúng 100%. Không có viewpoint 0 TC. VP-01, VP-04, VP-07 chỉ có 1 TC. VOUCHER-004, 005, 006 gắn `@negative` nhưng Expected là áp thành công; đếm theo tag như quy định.
+Ghi chú: tỉ lệ làm tròn 1 chữ số thập phân theo phần dư lớn nhất để tổng đúng 100%. Không có viewpoint 0 TC. VP-01, VP-04, VP-07 chỉ có 1 TC. VOUCHER-004 (D09), 005 và 006 (D10) gắn `@negative` đúng theo bảng gắn D-code trong `knowledge/viewpoints.md` (D09, D10 thuộc VP-02): input hoặc luồng lạ được hệ thống xử lý đúng nên Expected là áp thành công.
 
 ## Góc 3. Boundary
 
