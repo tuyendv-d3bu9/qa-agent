@@ -19,32 +19,32 @@
 
 ```text
 qa/
-├── INPUT/                                      # [SSOT] Tài liệu yêu cầu đầu vào
-│   ├── Hệ thống Thương mại điện tử “ShopGo”.md # Tổng quan hệ thống ShopGo, Actors, Feature Map (A-H), Glossary, NFR
-│   ├── Spec Function D.md                      # Đặc tả chi tiết Function D: Áp dụng Mã Giảm Giá (Voucher)
-│   ├── chat.md                                 # Ghi chú phát sinh từ Leader (chứa thông tin gây xung đột phạm vi địa lý)
-│   └── RAW/                                    # Lưu trữ bản gốc các tệp thô/không phải .md sau khi convert
-│       ├── Hệ thống Thương mại điện tử “ShopGo”.docx
-│       ├── Spec Function D.docx
-│       └── chat.md
-├── OUTPUT/                                     # Đầu ra của QA Analyst qua các Pha
-│   └── questions_for_clarification.md          # [Pha 1 - Đã tạo] Bảng 28 câu hỏi đóng gửi QA/BA cần làm rõ
-├── qa-analyst/                                 # Chứa System Prompt / Master Prompt cho AI đóng vai Senior QA Analyst
-│   └── prompt_qa_analyst.md                    # Master Prompt tích hợp đầy đủ Role, Context, Frameworks, Gate, FACT, Format
-├── docs/                                       # Thư mục tài liệu tổng hợp dự án
-│   ├── INFO.md                                 # Tệp tổng hợp thông tin toàn bộ repo này
-│   └── m02-resources/                          # Thư viện khung tư duy & tri thức ngành M02 (Knowledge Base)
-│       ├── 6W.md                               # Khung tra hỏi yêu cầu 6 góc nhìn (W1 -> W6)
-│       ├── DOMAIN_VOUCHER.md                   # Tri thức ngành Voucher TMĐT Việt Nam & Checklist 23 mục (D01 -> D23)
-│       ├── MISSING_RULE_TYPES.md               # 5 loại Missing Rule và quy tắc ưu tiên phân loại
-│       ├── FACT.md                             # Bộ 10 tiêu chí tự kiểm định chất lượng đầu ra của AI
-│       └── RCTFC.md                            # Khung cấu trúc viết prompt chuẩn
-├── tools/                                      # Các công cụ tự động hóa bằng Node.js
-│   ├── convert.js                              # Batch convert .docx trong INPUT/ sang .md và lưu trữ file gốc sang INPUT/RAW/
-│   └── gate.js                                 # Quản lý Hard Quality Gate (init, check, answer, status) qua gate_status.json
-├── gate_status.json                            # Trạng thái hiện tại của Hard Quality Gate (theo dõi tiến độ trả lời câu hỏi)
-├── package.json                                # Khai báo scripts và dependencies (mammoth, turndown, turndown-plugin-gfm)
-└── package-lock.json                           # Khóa phiên bản dependencies
+├── INPUT/                                      # [SSOT] Tài liệu yêu cầu đầu vào (chỉ đọc .md)
+│   ├── Hệ thống Thương mại điện tử “ShopGo”.md # Tổng quan ShopGo, Actors, Feature Map (A-H), Glossary, NFR
+│   ├── Spec Function D.md                      # Đặc tả Function D: Áp dụng Mã Giảm Giá (Voucher)
+│   ├── chat.md                                 # Ghi chú Leader (xung đột phạm vi địa lý, X01)
+│   └── RAW/                                    # Bản gốc .docx sau khi convert
+├── OUTPUT/                                     # Đầu ra các pha (questions, autopsy report, viewpoints, test_ideas...)
+├── qa-analyst/                                 # Agent QA Analyst: AGENTS.md + knowledge/ + skills/
+│   ├── AGENTS.md                               # Vai trò, luồng Pha 1 -> cổng chặn -> Pha 2 -> Pha 3, bảng skill, ràng buộc
+│   ├── knowledge/                              # voucher-domain.md (D01-D23), viewpoints.md (8 viewpoint)
+│   ├── skills/                                 # Mỗi skill 1 thư mục: SKILL.md + assets/
+│   └── _archive/prompt_qa_analyst_v1.md        # Prompt dài trước khi tách
+├── docs/
+│   ├── INFO.md                                 # Tệp tổng hợp thông tin repo
+│   ├── REVIEW-M02.md                           # Bố cục repo cho người review M02
+│   └── courses/                                # Tài liệu khóa học (agent không đọc)
+│       ├── m01/                                # 6W.md, FACT.md, MISSING_RULE_TYPES.md, RCTFC.md, DOMAIN_VOUCHER.md
+│       └── m02/                                # viewpoint-generator, test-idea-generation, test-case-format, coverage-review, NOTE
+│           └── thuc-hanh/                      # MINDSET, THUCHANH-0911, đáp án mẫu
+├── tools/
+│   ├── convert.js                              # .docx -> .md, chuyển bản gốc sang INPUT/RAW/
+│   ├── gate.js                                 # Hard Quality Gate (init, check, answer, status)
+│   ├── ba-answers-demo.js                      # Điền câu trả lời BA mẫu
+│   └── check-m02.js                            # Kiểm bài tách prompt (12 check)
+├── gate_status.json                            # Trạng thái cổng chặn, câu trả lời BA đã xác nhận
+├── package.json
+└── package-lock.json
 ```
 
 ---
