@@ -51,30 +51,33 @@ Bạn là Senior QA Analyst chuyên sâu về phân tích yêu cầu (Requiremen
 [ XUẤT BÁO CÁO HOÀN CHỈNH RA FILE: OUTPUT/requirement_autopsy_report.md ]
 ```
 
-### Pha 3: Thiết kế kiểm thử
+### Pha 3: Viewpoint và Test Idea
 
-Pha 3 chỉ bắt đầu khi đã có `OUTPUT/requirement_autopsy_report.md`. Làm đúng thứ tự:
+Pha 3 chỉ bắt đầu khi đã có `OUTPUT/requirement_autopsy_report.md` và `OUTPUT/project_knowledge.md`. Pha 3 đọc rule đã xác nhận ở `OUTPUT/project_knowledge.md` để lấy kết quả mong đợi. Làm đúng thứ tự:
 
 ```
 Pha 1 → Cổng chặn → Pha 2 → Pha 3
-                              ├── Viewpoint        → OUTPUT/viewpoints.md
-                              ├── Test Idea        → OUTPUT/test_ideas.md   → DỪNG, chờ người duyệt cột Lọc
-                              ├── Test Case        → OUTPUT/test_cases.md + OUTPUT/test_cases.csv
-                              └── Coverage Review  → OUTPUT/coverage_review.md
+                              ├── Viewpoint   → OUTPUT/viewpoints.md
+                              └── Test Idea   → OUTPUT/test_ideas.md   → DỪNG, chờ người duyệt cột Lọc
 ```
 
-**Điểm dừng sau Test Idea:** AI chỉ đề xuất nhãn ở cột Lọc, người quyết định. Ghi xong `OUTPUT/test_ideas.md` thì DỪNG, báo người dùng duyệt cột Lọc. Chỉ sang Test Case khi người dùng xác nhận đã duyệt. Người dùng có thể sửa cột Lọc trước khi xác nhận; Test Case dùng cột Lọc sau khi người duyệt.
+**Điểm dừng sau Test Idea:** AI chỉ đề xuất nhãn ở cột Lọc, người quyết định. Ghi xong `OUTPUT/test_ideas.md` thì DỪNG, báo người dùng duyệt cột Lọc. Việc viết test case và review độ phủ thuộc node `qa-test-designer/`, chỉ chạy sau khi người dùng xác nhận đã duyệt.
 
-Coverage Review chạy trên bộ test người dùng chỉ định:
-- `OUTPUT/test_cases.md` → `OUTPUT/coverage_review.md`
-- `skills/coverage-review/assets/lab4_test_suite.md` (bộ test mẫu Lab 4) → `OUTPUT/coverage_review_lab4.md`
+## Đầu ra bàn giao
+
+| File | Node nhận |
+|---|---|
+| `OUTPUT/requirement_autopsy_report.md` | qa-test-designer |
+| `OUTPUT/project_knowledge.md` | qa-test-designer |
+| `OUTPUT/viewpoints.md` | qa-test-designer |
+| `OUTPUT/test_ideas.md` | qa-test-designer |
 
 ## Kỹ năng và tri thức
 
 Báo cáo kết quả phải được xuất ra thư mục `OUTPUT/` theo từng pha:
 - Pha 1: `OUTPUT/questions_for_clarification.md`
-- Pha 2: `OUTPUT/requirement_autopsy_report.md`
-- Pha 3: `OUTPUT/viewpoints.md`, `OUTPUT/test_ideas.md`, `OUTPUT/test_cases.md`, `OUTPUT/test_cases.csv`, `OUTPUT/coverage_review.md` (và `OUTPUT/coverage_review_lab4.md` khi review bộ test mẫu Lab 4)
+- Pha 2: `OUTPUT/requirement_autopsy_report.md`, `OUTPUT/project_knowledge.md`
+- Pha 3: `OUTPUT/viewpoints.md`, `OUTPUT/test_ideas.md`
 
 | Pha | Skill | Dùng khi |
 |---|---|---|
@@ -83,14 +86,13 @@ Báo cáo kết quả phải được xuất ra thư mục `OUTPUT/` theo từng
 | Pha 2 | `skills/missing-rule-classification/SKILL.md` | Xếp mỗi điểm có trạng thái MO_HO, KHONG_DE_CAP hoặc MAU_THUAN vào 1 trong 5 nhóm Missing Rule và gán mức rủi ro CAO, TB, THAP. Dùng ở Pha 2. |
 | Pha 2 | `skills/requirement-autopsy-report/SKILL.md` | Viết báo cáo Requirement Autopsy 4 phần A–D ra OUTPUT/requirement_autopsy_report.md. Chỉ dùng ở Pha 2, sau khi node tools/gate.js check trả về exit 0. |
 | Pha 2 | `skills/fact-self-check/SKILL.md` | Tự kiểm báo cáo Pha 2 theo 10 tiêu chí FACT, ghi DAT hoặc KHONG_DAT kèm dẫn chứng. Dùng ở Pha 2, trước khi xuất báo cáo. |
+| Pha 2 | `skills/project-knowledge/SKILL.md` | Gom rule đã xác nhận của dự án từ INPUT/ và gate_status.json thành OUTPUT/project_knowledge.md. Dùng cuối Pha 2, sau requirement-autopsy-report. |
 | Pha 3 | `skills/viewpoint-generator/SKILL.md` | Bước Viewpoint: xếp các D-code và mã X chưa RO vào 8 viewpoint, đếm điểm chưa rõ, chọn Top 3, ghi OUTPUT/viewpoints.md. |
 | Pha 3 | `skills/test-idea-generation/SKILL.md` | Bước Test Idea: sinh idea có nguồn, đề xuất nhãn Lọc, ghi OUTPUT/test_ideas.md rồi dừng chờ người duyệt. |
-| Pha 3 | `skills/test-case-format/SKILL.md` | Bước Test Case: chỉ sau khi người duyệt cột Lọc, chuyển idea GIU thành test case 8 trường, ghi OUTPUT/test_cases.md và .csv. |
-| Pha 3 | `skills/coverage-review/SKILL.md` | Bước Coverage Review: rà độ phủ bộ test theo 3 góc nhìn, liệt kê gap, ghi OUTPUT/coverage_review.md. |
 
 Tri thức dùng chung:
 - `knowledge/voucher-domain.md`: tri thức ngành voucher, danh mục D01–D23. Dùng ở cả 3 pha.
-- `knowledge/viewpoints.md`: 8 viewpoint và bảng gắn D-code. Dùng ở Pha 3 (Viewpoint, Test Idea, Coverage Review).
+- `knowledge/viewpoints.md`: 8 viewpoint và bảng gắn D-code. Dùng ở Pha 3 (Viewpoint, Test Idea) và ở node `qa-test-designer` (Coverage Review).
 
 Mỗi pha chỉ mở đúng các skill của pha đó.
 

@@ -37,6 +37,7 @@ Xem `knowledge/viewpoints.md`.
 - Đủ 8 viewpoint, kể cả viewpoint không có điểm nào.
 - Viewpoint không có điểm nào ghi `KHONG_CO_DIEM`. Không có nghĩa là không cần test, mà là danh mục D-code chưa có chủ đề cho góc này.
 - Không tự đặt viewpoint mới như "Edge Case". Edge case nằm trong Boundary hoặc Negative.
+- Một D-code có nhiều mức rủi ro (nhiều câu hỏi ở Phần B) thì lấy mức cao nhất.
 
 ## Khuôn đầu ra
 

@@ -1,6 +1,6 @@
 ---
 name: coverage-review
-description: Rà bộ test theo 3 góc (Requirement ↔ Test Suite, Viewpoint Balance, Boundary), gán nhãn COVER, MOT_PHAN, CHUA_COVER và liệt kê gap kèm rủi ro, đề xuất test case. Dùng ở bước Coverage Review (cuối) của Pha 3; đọc bộ test (OUTPUT/test_cases.md hoặc assets/lab4_test_suite.md), OUTPUT/requirement_autopsy_report.md, OUTPUT/viewpoints.md, knowledge/viewpoints.md và ghi OUTPUT/coverage_review.md (với bộ Lab 4 thì ghi OUTPUT/coverage_review_lab4.md).
+description: Rà bộ test theo 3 góc (Requirement ↔ Test Suite, Viewpoint Balance, Boundary), gán nhãn COVER, MOT_PHAN, CHUA_COVER và liệt kê gap kèm rủi ro, đề xuất test case. Dùng ở bước Coverage Review (cuối) của Pha 3; đọc bộ test (OUTPUT/test_cases.md hoặc assets/lab4_test_suite.md), OUTPUT/requirement_autopsy_report.md, OUTPUT/viewpoints.md, ../qa-analyst/knowledge/viewpoints.md và ghi OUTPUT/coverage_review.md (với bộ Lab 4 thì ghi OUTPUT/coverage_review_lab4.md).
 ---
 
 # Coverage Review
@@ -18,7 +18,7 @@ Tìm chỗ bộ test chưa phủ. Trả lời: rule nào chưa có test, góc n�
 | Đầu vào | `OUTPUT/viewpoints.md` | 8 viewpoint |
 | Đầu ra | `OUTPUT/coverage_review.md` | 3 góc nhìn + danh sách gap |
 
-Danh sách 8 viewpoint: xem `knowledge/viewpoints.md`.
+Danh sách 8 viewpoint: xem `../qa-analyst/knowledge/viewpoints.md`.
 
 ## 3 góc nhìn
 
@@ -62,7 +62,7 @@ Test chỉ nói "dưới tối thiểu" mà không đúng 1đ thì ghi `MOT_PHAN
 4. Mỗi dòng không phải `COVER`, và mỗi viewpoint 0 TC, thành 1 gap.
 5. Mỗi gap ghi rủi ro (lấy theo D-code) và đề xuất 1 test case bổ sung.
 
-Danh sách 8 viewpoint: xem `knowledge/viewpoints.md`.
+Danh sách 8 viewpoint: xem `../qa-analyst/knowledge/viewpoints.md`.
 
 ## Khuôn đầu ra
 

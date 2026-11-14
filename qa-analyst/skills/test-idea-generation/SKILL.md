@@ -44,6 +44,8 @@ Requirement → Viewpoint → Test idea → Người lọc → Test case
 
 Danh sách viewpoint: xem `knowledge/viewpoints.md`.
 
+BR đánh số theo thứ tự gạch đầu dòng "Các quy tắc đã nêu" trong `INPUT/Spec Function D.md`: BR-01, BR-02...
+
 Đủ khi:
 - Mỗi BR có ít nhất 1 idea Happy và 1 idea Negative.
 - Mỗi câu hỏi đã xác nhận có ít nhất 1 idea.
@@ -64,7 +66,7 @@ Lab 3 yêu cầu từ 20 idea trở lên.
 |---|---|
 | `GIU` | Có nguồn, đúng phạm vi Function D, không trùng |
 | `BO_TRUNG` | Cùng điều kiện, cùng kết quả với idea có ID nhỏ hơn |
-| `NGOAI_PHAM_VI` | Test phần khác: chọn thanh toán, phí ship, đặt hàng |
+| `NGOAI_PHAM_VI` | Test luồng không liên quan tới mã: chọn phương thức thanh toán, tính phí ship |
 
 Người lọc, không phải AI. AI có thể đề xuất nhãn, người quyết định.
 
@@ -79,7 +81,6 @@ Dùng khuôn `assets/test_ideas.md`.
 | TI-03 | VP-03 | Đơn đúng 200.000đ, mã tối thiểu 200.000đ → áp được | Q-D03-02 | GIU | BA xác nhận là lớn hơn hoặc bằng |
 | TI-04 | VP-03 | Đơn 199.999đ, mã tối thiểu 200.000đ → không áp được | BR-02 | GIU | |
 | TI-09 | VP-02 | Mã đã hết hạn → báo lỗi | BR-05 | BO_TRUNG | Trùng TI-06 |
-| TI-15 | VP-08 | Áp mã rồi đổi sang thanh toán thẻ → phí thẻ đúng | — | NGOAI_PHAM_VI | Thuộc tính năng Thanh toán |
 
 ## Lỗi hay gặp
 

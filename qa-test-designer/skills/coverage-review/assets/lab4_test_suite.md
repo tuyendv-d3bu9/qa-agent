@@ -18,4 +18,3 @@
 | TC-14 | Checkout không đăng nhập vẫn áp được voucher | Medium | Happy Path |
 | TC-15 | Voucher áp thành công lưu đúng trong lịch sử đơn hàng | High | Happy Path |
 
-Bộ này có ít nhất 4 gap cài sẵn.

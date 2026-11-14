@@ -1,12 +1,12 @@
 {
   "project": "QA Analyst Clarification Gate",
   "source_file": "OUTPUT/questions_for_clarification.md",
-  "total_questions": 28,
-  "resolved_count": 28,
+  "total_questions": 36,
+  "resolved_count": 36,
   "unresolved_count": 0,
   "gate_passed": true,
   "created_at": "2026-11-06T14:34:07.449Z",
-  "last_checked_at": "2026-11-09T14:52:04.901Z",
+  "last_checked_at": "2026-11-14T12:04:40.690Z",
   "questions": [
     {
       "id": "Q-D01-01",
@@ -372,6 +372,112 @@
       "answer": "A. Không hỗ trợ, chỉ phục vụ khách mua hàng và giao hàng tại Việt Nam với đơn vị tiền tệ VNĐ",
       "answered_by": "QA/BA",
       "answered_at": "2026-11-09T14:23:30.000Z"
+    },
+    {
+      "id": "Q-D08-02",
+      "d_code": "D08",
+      "question": "Nếu mã giới hạn phạm vi và giỏ có cả sản phẩm thuộc và không thuộc phạm vi thì tiền giảm tính thế nào?",
+      "options": [
+        "A. Chỉ tính trên sản phẩm thuộc phạm vi",
+        "B. Tính trên toàn bộ giỏ hàng",
+        "C. Không cho áp mã"
+      ],
+      "status": "RESOLVED",
+      "answer": "C. Không cho áp mã",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.655Z"
+    },
+    {
+      "id": "Q-D13-02",
+      "d_code": "D13",
+      "question": "Thông báo lỗi hiển thị ở đâu?",
+      "options": [
+        "A. Ngay dưới ô \"Mã giảm giá\"",
+        "B. Dạng toast/popup"
+      ],
+      "status": "RESOLVED",
+      "answer": "A. Ngay dưới ô \"Mã giảm giá\"",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.675Z"
+    },
+    {
+      "id": "Q-D15-02",
+      "d_code": "D15",
+      "question": "Khi thanh toán thẻ/Ví ShopGo thất bại thì lượt dùng mã xử lý thế nào?",
+      "options": [
+        "A. Hoàn lượt, khách áp lại được",
+        "B. Mất lượt"
+      ],
+      "status": "RESOLVED",
+      "answer": "A. Hoàn lượt, khách áp lại được",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.695Z"
+    },
+    {
+      "id": "Q-D16-02",
+      "d_code": "D16",
+      "question": "Sau khi áp mã %, khách đổi số lượng sản phẩm (vẫn đạt ngưỡng) thì tiền giảm có được tính lại không?",
+      "options": [
+        "A. Tự tính lại theo giỏ mới",
+        "B. Giữ nguyên số tiền giảm ban đầu"
+      ],
+      "status": "RESOLVED",
+      "answer": "A. Tự tính lại theo giỏ mới",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.715Z"
+    },
+    {
+      "id": "Q-D16-03",
+      "d_code": "D16",
+      "question": "Khi phiên đăng nhập hết hạn sau khi đã áp mã, đăng nhập lại thì mã có được giữ không?",
+      "options": [
+        "A. Giữ mã đã áp",
+        "B. Mất mã, khách phải áp lại"
+      ],
+      "status": "RESOLVED",
+      "answer": "B. Mất mã, khách phải áp lại",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.734Z"
+    },
+    {
+      "id": "Q-D20-02",
+      "d_code": "D20",
+      "question": "Khi đổi địa chỉ giao làm thay đổi phí ship sau khi đã áp mã thì mã có được kiểm tra lại không?",
+      "options": [
+        "A. Có, kiểm tra và tính lại",
+        "B. Không, giữ nguyên mã và tiền giảm"
+      ],
+      "status": "RESOLVED",
+      "answer": "A. Có, kiểm tra và tính lại",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.754Z"
+    },
+    {
+      "id": "Q-D21-02",
+      "d_code": "D21",
+      "question": "Tiền giảm được tính và xác nhận ở đâu?",
+      "options": [
+        "A. Máy chủ tự tính, bỏ qua giá trị gửi từ giao diện",
+        "B. Dùng giá trị giao diện gửi lên"
+      ],
+      "status": "RESOLVED",
+      "answer": "B. Dùng giá trị giao diện gửi lên",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.774Z"
+    },
+    {
+      "id": "Q-X01-02",
+      "d_code": "X01",
+      "question": "Nếu khách tại Nhật Bản được mua hàng, tiền tệ và múi giờ hiệu lực mã áp dụng thế nào?",
+      "options": [
+        "A. Vẫn VND và giờ Việt Nam (UTC+7)",
+        "B. Theo tiền tệ và múi giờ của Nhật Bản",
+        "C. Không áp dụng vì chỉ bán tại Việt Nam"
+      ],
+      "status": "RESOLVED",
+      "answer": "C. Không áp dụng vì chỉ bán tại Việt Nam",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.794Z"
     }
   ]
 }

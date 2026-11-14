@@ -19,10 +19,10 @@ Chuyển idea đã lọc thành test case đủ 8 trường, import được và
 |---|---|---|
 | TC_ID | Tiền tố tính năng + số | `VOUCHER-001` |
 | Title | Bắt đầu bằng Verify hoặc Validate. Tối đa 15 từ | Verify mã áp được khi đơn đúng bằng giá trị tối thiểu |
-| Precondition | Trạng thái trước khi test | Đã đăng nhập. Giỏ có 1 sản phẩm 200.000đ. Đang ở trang Thanh toán |
-| Test Steps | Đánh số, mỗi bước 1 hành động, tối đa 8 bước | 1. Nhập "SALE-A102" vào ô Mã giảm giá |
-| Test Data | Giá trị cụ thể | Mã `SALE-A102` (giảm 20%, tối thiểu 200.000đ), đơn 200.000đ |
-| Expected Result | Cụ thể, kiểm được | Giảm 40.000đ. Tổng còn 160.000đ |
+| Precondition | Trạng thái trước khi test | Đã đăng nhập. Giỏ có 1 sản phẩm, tổng đơn theo [CAN_DU_LIEU]. Đang ở trang Thanh toán |
+| Test Steps | Đánh số, mỗi bước 1 hành động, tối đa 8 bước | 1. Nhập mã theo Test Data vào ô Mã giảm giá |
+| Test Data | Giá trị cụ thể | [CAN_DU_LIEU] Mã giảm %, còn hạn, giá trị tối thiểu bằng tổng đơn |
+| Expected Result | Cụ thể, kiểm được | Hiển thị số tiền được giảm và tổng tiền mới theo [CAN_DU_LIEU] |
 | Priority | Theo bảng dưới | HIGH |
 | Tags | Theo danh sách dưới | `@checkout @voucher @boundary` |
 
@@ -60,7 +60,7 @@ Thêm cột **Nguồn** để truy vết: TI-ID, D-code, Q-ID.
 | Lỗi | Ví dụ sai | Sửa |
 |---|---|---|
 | Expected mơ hồ | Hiển thị thông báo lỗi | Hiển thị "Mã đã hết hạn" dưới ô nhập mã |
-| Test data chung chung | Nhập mã hợp lệ | Nhập `SALE-A102` |
+| Test data chung chung | Nhập mã hợp lệ | [CAN_DU_LIEU] Mã giảm %, còn hạn, giá trị tối thiểu bằng tổng đơn |
 | Gộp bước | Nhập mã và bấm Áp dụng | Tách thành 2 bước |
 | Thiếu precondition | Không nói giỏ có gì | Ghi sản phẩm, tạm tính |
 | Lấn phạm vi | Test luôn chọn thanh toán, đặt hàng | Dừng ở kết quả áp mã |
@@ -88,10 +88,10 @@ CSV, mỗi ô bọc nháy kép, các bước nối bằng ` | `:
 |---|---|
 | TC_ID | VOUCHER-003 |
 | Title | Verify mã áp được khi đơn đúng bằng giá trị tối thiểu |
-| Precondition | Đã đăng nhập. Giỏ có SP-01 giá 200.000đ. Đang ở trang Thanh toán, chưa áp mã |
-| Test Steps | 1. Nhập "SALE-A102" vào ô Mã giảm giá<br>2. Bấm Áp dụng<br>3. Xem số tiền giảm và tổng tiền |
-| Test Data | `SALE-A102`: giảm 20%, tối thiểu 200.000đ, còn hạn |
-| Expected Result | Mã được áp. Giảm 40.000đ. Tổng còn 160.000đ |
+| Precondition | Đã đăng nhập. Giỏ có SP-01, tổng đơn theo [CAN_DU_LIEU]. Đang ở trang Thanh toán, chưa áp mã |
+| Test Steps | 1. Nhập mã theo Test Data vào ô Mã giảm giá<br>2. Bấm Áp dụng<br>3. Xem số tiền giảm và tổng tiền |
+| Test Data | [CAN_DU_LIEU] Mã giảm %, còn hạn, giá trị tối thiểu bằng tổng đơn |
+| Expected Result | Mã được áp. Hiển thị số tiền được giảm và tổng tiền mới theo [CAN_DU_LIEU] |
 | Priority | HIGH |
 | Tags | `@checkout @voucher @boundary` |
 | Nguồn | TI-03, D03, Q-D03-02 |
