@@ -1,12 +1,12 @@
 {
   "project": "QA Analyst Clarification Gate",
   "source_file": "OUTPUT/questions_for_clarification.md",
-  "total_questions": 28,
-  "resolved_count": 0,
-  "unresolved_count": 28,
-  "gate_passed": false,
+  "total_questions": 36,
+  "resolved_count": 36,
+  "unresolved_count": 0,
+  "gate_passed": true,
   "created_at": "2026-11-06T14:34:07.449Z",
-  "last_checked_at": "2026-11-06T14:34:12.953Z",
+  "last_checked_at": "2026-11-14T12:04:40.690Z",
   "questions": [
     {
       "id": "Q-D01-01",
@@ -16,10 +16,10 @@
         "A. Có hỗ trợ mã Freeship",
         "B. Không hỗ trợ mã Freeship (chỉ hỗ trợ 2 loại mã giảm giá tiền hàng)"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Có hỗ trợ mã Freeship (nhưng mặc định áp dụng cho hóa đơn từ 200.000đ)",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D02-01",
@@ -29,10 +29,10 @@
         "A. Có trần giảm tối đa (cấu hình theo từng mã cụ thể)",
         "B. Không áp dụng trần giảm (giảm theo đúng tỷ lệ % trên tổng tiền hàng)"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Có trần giảm tối đa (cấu hình theo từng mã cụ thể)",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D03-01",
@@ -42,10 +42,10 @@
         "A. Tạm tính tiền hàng (Subtotal - chưa bao gồm phí vận chuyển)",
         "B. Tổng tiền đơn hàng (đã bao gồm phí vận chuyển)"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "B. Tổng tiền đơn hàng (đã bao gồm phí vận chuyển)",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D03-02",
@@ -55,10 +55,10 @@
         "A. Lớn hơn hoặc bằng (>= giá trị tối thiểu quy định)",
         "B. Lớn hơn hẳn (> giá trị tối thiểu quy định)"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Lớn hơn hoặc bằng (>= giá trị tối thiểu quy định)",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D04-01",
@@ -68,10 +68,10 @@
         "A. Đến 23:59:59 của ngày hết hạn",
         "B. Đến 00:00:00 của ngày hết hạn"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Đến 23:59:59 của ngày hết hạn",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D04-02",
@@ -81,10 +81,10 @@
         "A. Múi giờ Việt Nam (GMT+7)",
         "B. Múi giờ máy chủ quốc tế (UTC / GMT+0)"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Múi giờ Việt Nam (GMT+7)",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D05-01",
@@ -94,10 +94,10 @@
         "A. Có giới hạn tổng lượt dùng toàn hệ thống (hết lượt thì không dùng được nữa)",
         "B. Không giới hạn tổng lượt dùng (chỉ phụ thuộc vào hạn sử dụng)"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Có giới hạn tổng lượt dùng toàn hệ thống (hết lượt thì không dùng được nữa)",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D06-01",
@@ -107,10 +107,10 @@
         "A. Tối đa 1 lần duy nhất cho mỗi tài khoản khách hàng",
         "B. Được dùng nhiều lần miễn là mã còn hạn và còn tổng lượt dùng"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Tối đa 1 lần duy nhất cho mỗi tài khoản khách hàng",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D07-01",
@@ -120,10 +120,10 @@
         "A. Bắt buộc phải đăng nhập tài khoản trước mới được nhập và áp dụng mã",
         "B. Cho phép nhập áp dụng thử để xem số tiền giảm, nhưng khi bấm Đặt hàng thì bắt buộc đăng nhập"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Bắt buộc phải đăng nhập tài khoản trước mới được nhập và áp dụng mã",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D08-01",
@@ -133,10 +133,10 @@
         "A. Áp dụng cho toàn bộ sản phẩm trong giỏ hàng",
         "B. Có thể áp dụng riêng cho từng danh mục sản phẩm cụ thể (sản phẩm ngoài danh mục không được giảm)"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Áp dụng cho toàn bộ sản phẩm trong giỏ hàng",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D09-01",
@@ -146,10 +146,10 @@
         "A. Tối đa 1 mã giảm giá duy nhất trên một đơn hàng",
         "B. Cho phép áp dụng nhiều mã nếu khác loại mã"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Tối đa 1 mã giảm giá duy nhất trên một đơn hàng",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D09-02",
@@ -159,10 +159,10 @@
         "A. Tự động ghi đè mã mới thay thế mã cũ nếu mã mới hợp lệ",
         "B. Báo lỗi yêu cầu người dùng phải gỡ mã cũ trước khi nhập mã mới"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Tự động ghi đè mã mới thay thế mã cũ nếu mã mới hợp lệ",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D10-01",
@@ -172,10 +172,10 @@
         "A. Không phân biệt hoa/thường (hệ thống tự động chuyển đổi thành chữ in hoa)",
         "B. Phân biệt chính xác chữ in hoa và chữ in thường"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Không phân biệt hoa/thường (hệ thống tự động chuyển đổi thành chữ in hoa)",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D10-02",
@@ -185,10 +185,10 @@
         "A. Tự động cắt bỏ khoảng trắng thừa (auto-trim) trước khi kiểm tra mã",
         "B. Giữ nguyên chuỗi nhập và báo lỗi mã không hợp lệ"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Tự động cắt bỏ khoảng trắng thừa (auto-trim) trước khi kiểm tra mã",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D11-01",
@@ -199,10 +199,10 @@
         "B. Làm tròn xuống (Floor) đến hàng nghìn 1.000đ",
         "C. Làm tròn số học đến hàng nghìn 1.000đ"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "C. Làm tròn số học đến hàng nghìn 1.000đ",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D12-01",
@@ -212,10 +212,10 @@
         "A. Tiền giảm tối đa bằng tạm tính tiền hàng (tiền hàng sau giảm về 0đ)",
         "B. Báo lỗi không cho áp dụng mã vì giá trị đơn hàng chưa đủ"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Tiền giảm tối đa bằng tạm tính tiền hàng (tiền hàng sau giảm về 0đ)",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D13-01",
@@ -225,10 +225,10 @@
         "A. Tách biệt thông báo lỗi theo nguyên nhân (Hết hạn, Chưa đủ đơn tối thiểu, Hết lượt dùng, Mã không tồn tại)",
         "B. Dùng chung một thông báo lỗi \"Mã không hợp lệ hoặc hết hạn\""
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Tách biệt thông báo lỗi theo nguyên nhân (Hết hạn, Chưa đủ đơn tối thiểu, Hết lượt dùng, Mã không tồn tại)",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D14-01",
@@ -238,10 +238,10 @@
         "A. Trừ chính thức ngay khi người dùng bấm nút Đặt hàng thành công",
         "B. Tạm giữ lượt khi bấm Áp dụng mã thành công và trừ chính thức khi Đặt hàng thành công"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "B. Tạm giữ lượt khi bấm Áp dụng mã thành công và trừ chính thức khi Đặt hàng thành công",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D15-01",
@@ -251,10 +251,10 @@
         "A. Tự động hoàn lại lượt dùng mã cho khách hàng",
         "B. Không hoàn lại lượt dùng mã"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Tự động hoàn lại lượt dùng mã cho khách hàng",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D16-01",
@@ -264,10 +264,10 @@
         "A. Tự động hủy áp dụng mã và thông báo đơn hàng không còn đủ điều kiện hưởng ưu đãi",
         "B. Giữ nguyên mã đã áp dụng cho đến khi khách bấm Đặt hàng mới kiểm tra lại"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Tự động hủy áp dụng mã và thông báo đơn hàng không còn đủ điều kiện hưởng ưu đãi",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D17-01",
@@ -277,10 +277,10 @@
         "A. Có nút hoặc biểu tượng gỡ mã, khi bấm vào thì gỡ mã và tính lại tổng tiền ban đầu",
         "B. Không có chức năng chủ động gỡ mã"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Có nút hoặc biểu tượng gỡ mã, khi bấm vào thì gỡ mã và tính lại tổng tiền ban đầu",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D18-01",
@@ -290,10 +290,10 @@
         "A. Đơn hàng nào ghi nhận trước tại máy chủ sẽ áp dụng thành công, đơn hàng sau báo lỗi mã đã hết lượt",
         "B. Giữ chỗ (reserve) lượt dùng ngay tại thời điểm khách bấm Áp dụng thành công"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Đơn hàng nào ghi nhận trước tại máy chủ sẽ áp dụng thành công, đơn hàng sau báo lỗi mã đã hết lượt",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D19-01",
@@ -303,10 +303,10 @@
         "A. Kiểm tra lại tại thời điểm bấm Đặt hàng, từ chối tạo đơn và thông báo mã không còn hiệu lực",
         "B. Vẫn cho phép hoàn tất đơn hàng vì đã áp dụng thành công trước đó"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Kiểm tra lại tại thời điểm bấm Đặt hàng, từ chối tạo đơn và thông báo mã không còn hiệu lực",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D20-01",
@@ -316,10 +316,10 @@
         "A. Chỉ giảm trừ vào tiền hàng (Subtotal), không giảm trừ vào phí vận chuyển",
         "B. Giảm trừ vào tổng giá trị đơn hàng (bao gồm cả tiền hàng và phí vận chuyển)"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "B. Giảm trừ vào tổng giá trị đơn hàng (bao gồm cả tiền hàng và phí vận chuyển)",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D21-01",
@@ -329,10 +329,10 @@
         "A. Khóa tạm thời tính năng nhập mã trong 5 phút sau 5 lần nhập sai liên tiếp",
         "B. Không giới hạn số lần nhập mã sai"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "B. Không giới hạn số lần nhập mã sai",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D22-01",
@@ -342,10 +342,10 @@
         "A. Có hiển thị spinner/loading và vô hiệu hóa nút Áp dụng trong khi chờ API phản hồi",
         "B. Không vô hiệu hóa nút Áp dụng"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Có hiển thị spinner/loading và vô hiệu hóa nút Áp dụng trong khi chờ API phản hồi",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-D23-01",
@@ -355,10 +355,10 @@
         "A. Có lưu vết đầy đủ mã giảm giá, số tiền được giảm và hiển thị trong chi tiết đơn hàng, lịch sử đơn và email xác nhận",
         "B. Chỉ lưu và hiển thị tổng số tiền thanh toán cuối cùng"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Có lưu vết đầy đủ mã giảm giá, số tiền được giảm và hiển thị trong chi tiết đơn hàng, lịch sử đơn và email xác nhận",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
     },
     {
       "id": "Q-X01-01",
@@ -368,10 +368,116 @@
         "A. Không hỗ trợ, chỉ phục vụ khách mua hàng và giao hàng tại Việt Nam với đơn vị tiền tệ VNĐ",
         "B. Có hỗ trợ mua hàng tại Nhật Bản và cần bổ sung đặc tả chuyển đổi ngoại tệ"
       ],
-      "status": "UNRESOLVED",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null
+      "status": "RESOLVED",
+      "answer": "A. Không hỗ trợ, chỉ phục vụ khách mua hàng và giao hàng tại Việt Nam với đơn vị tiền tệ VNĐ",
+      "answered_by": "QA/BA",
+      "answered_at": "2026-11-09T14:23:30.000Z"
+    },
+    {
+      "id": "Q-D08-02",
+      "d_code": "D08",
+      "question": "Nếu mã giới hạn phạm vi và giỏ có cả sản phẩm thuộc và không thuộc phạm vi thì tiền giảm tính thế nào?",
+      "options": [
+        "A. Chỉ tính trên sản phẩm thuộc phạm vi",
+        "B. Tính trên toàn bộ giỏ hàng",
+        "C. Không cho áp mã"
+      ],
+      "status": "RESOLVED",
+      "answer": "C. Không cho áp mã",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.655Z"
+    },
+    {
+      "id": "Q-D13-02",
+      "d_code": "D13",
+      "question": "Thông báo lỗi hiển thị ở đâu?",
+      "options": [
+        "A. Ngay dưới ô \"Mã giảm giá\"",
+        "B. Dạng toast/popup"
+      ],
+      "status": "RESOLVED",
+      "answer": "A. Ngay dưới ô \"Mã giảm giá\"",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.675Z"
+    },
+    {
+      "id": "Q-D15-02",
+      "d_code": "D15",
+      "question": "Khi thanh toán thẻ/Ví ShopGo thất bại thì lượt dùng mã xử lý thế nào?",
+      "options": [
+        "A. Hoàn lượt, khách áp lại được",
+        "B. Mất lượt"
+      ],
+      "status": "RESOLVED",
+      "answer": "A. Hoàn lượt, khách áp lại được",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.695Z"
+    },
+    {
+      "id": "Q-D16-02",
+      "d_code": "D16",
+      "question": "Sau khi áp mã %, khách đổi số lượng sản phẩm (vẫn đạt ngưỡng) thì tiền giảm có được tính lại không?",
+      "options": [
+        "A. Tự tính lại theo giỏ mới",
+        "B. Giữ nguyên số tiền giảm ban đầu"
+      ],
+      "status": "RESOLVED",
+      "answer": "A. Tự tính lại theo giỏ mới",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.715Z"
+    },
+    {
+      "id": "Q-D16-03",
+      "d_code": "D16",
+      "question": "Khi phiên đăng nhập hết hạn sau khi đã áp mã, đăng nhập lại thì mã có được giữ không?",
+      "options": [
+        "A. Giữ mã đã áp",
+        "B. Mất mã, khách phải áp lại"
+      ],
+      "status": "RESOLVED",
+      "answer": "B. Mất mã, khách phải áp lại",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.734Z"
+    },
+    {
+      "id": "Q-D20-02",
+      "d_code": "D20",
+      "question": "Khi đổi địa chỉ giao làm thay đổi phí ship sau khi đã áp mã thì mã có được kiểm tra lại không?",
+      "options": [
+        "A. Có, kiểm tra và tính lại",
+        "B. Không, giữ nguyên mã và tiền giảm"
+      ],
+      "status": "RESOLVED",
+      "answer": "A. Có, kiểm tra và tính lại",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.754Z"
+    },
+    {
+      "id": "Q-D21-02",
+      "d_code": "D21",
+      "question": "Tiền giảm được tính và xác nhận ở đâu?",
+      "options": [
+        "A. Máy chủ tự tính, bỏ qua giá trị gửi từ giao diện",
+        "B. Dùng giá trị giao diện gửi lên"
+      ],
+      "status": "RESOLVED",
+      "answer": "B. Dùng giá trị giao diện gửi lên",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.774Z"
+    },
+    {
+      "id": "Q-X01-02",
+      "d_code": "X01",
+      "question": "Nếu khách tại Nhật Bản được mua hàng, tiền tệ và múi giờ hiệu lực mã áp dụng thế nào?",
+      "options": [
+        "A. Vẫn VND và giờ Việt Nam (UTC+7)",
+        "B. Theo tiền tệ và múi giờ của Nhật Bản",
+        "C. Không áp dụng vì chỉ bán tại Việt Nam"
+      ],
+      "status": "RESOLVED",
+      "answer": "C. Không áp dụng vì chỉ bán tại Việt Nam",
+      "answered_by": "BA (demo lớp học)",
+      "answered_at": "2026-11-14T11:55:09.794Z"
     }
   ]
 }

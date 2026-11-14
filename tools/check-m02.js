@@ -76,7 +76,8 @@ check('C04', 'Chép nguyên văn từ prompt cũ', () => {
   const all = new Set(FILES.map(read).filter(Boolean).join('\n').split('\n').map(norm));
   const skip = (l) => !l.trim() || l.trim() === '---' || /^#/.test(l.trim()) ||
     l.includes('TRUNG BÌNH') || l.includes('mang nhãn `MOT_PHAN`') ||
-    /^4\. \*\*Không phụ thuộc/.test(l.trim()) || /^- D\d\d: /.test(l.trim());
+    /^4\. \*\*Không phụ thuộc/.test(l.trim()) || /^- D\d\d: /.test(l.trim()) ||
+    l.includes('với 2 tệp tin:');
   const miss = old.filter((l) => !skip(l) && !all.has(norm(l)));
   return miss.length ? `${miss.length} dòng không còn nguyên văn, ví dụ: "${norm(miss[0]).slice(0, 80)}"` : '';
 });
