@@ -1,7 +1,7 @@
 # Báo cáo Requirement Autopsy — ShopGo Function D: Áp dụng Mã Giảm Giá
 
 - Pha: 2 (Phân tích chi tiết và viết Expected Result)
-- Cổng chặn: `node tools/gate.js check` trả về exit 0, 36/36 câu hỏi RESOLVED (kiểm tra lúc 2026-11-14T11:55:23.451Z).
+- Cổng chặn: `node tools/gate.js check` trả về exit 0, 36/36 câu hỏi RESOLVED (kiểm tra lúc 2026-11-14T13:58:53.765Z).
 - Nguồn sự thật: `INPUT/Spec Function D.md`, `INPUT/Hệ thống Thương mại điện tử “ShopGo”.md`, `INPUT/chat.md`, câu trả lời đã xác nhận trong `gate_status.json`.
 - Quy ước Test Data: không tự đặt mã giảm giá hay giá tiền. Giá trị chưa có trong `INPUT/` hoặc câu trả lời đã xác nhận được ghi `[CAN_DU_LIEU]`.
 
