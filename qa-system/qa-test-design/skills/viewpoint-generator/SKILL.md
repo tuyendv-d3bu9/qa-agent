@@ -1,6 +1,6 @@
 ---
 name: viewpoint-generator
-description: Xếp các D-code và mã X chưa rõ vào 8 viewpoint kiểm thử cố định, đếm phân bố rủi ro và chọn Top 3 viewpoint ưu tiên. Dùng ở bước Viewpoint (đầu tiên) của Pha 3; đọc OUTPUT/requirement_autopsy_report.md, knowledge/viewpoints.md, knowledge/voucher-domain.md và ghi OUTPUT/viewpoints.md.
+description: Xếp các D-code và mã X chưa rõ vào 8 viewpoint kiểm thử cố định, đếm phân bố rủi ro và chọn Top 3 viewpoint ưu tiên. Dùng ở Bước 1 (Viewpoint Analysis) của qa-test-design; đọc OUTPUT/requirement_autopsy_report.md, knowledge/viewpoints.md, knowledge/voucher-domain.md và ghi OUTPUT/viewpoints.md.
 ---
 
 # Viewpoint Generator

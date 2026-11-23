@@ -20,7 +20,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const PROJECT_ROOT = path.resolve(__dirname, '..');
+const PROJECT_ROOT = path.resolve(__dirname, '../..');
 const DEFAULT_GATE_FILE = path.join(PROJECT_ROOT, 'gate_status.json');
 
 /**
@@ -29,7 +29,7 @@ const DEFAULT_GATE_FILE = path.join(PROJECT_ROOT, 'gate_status.json');
 function readGateStatus(filePath = DEFAULT_GATE_FILE) {
   if (!fs.existsSync(filePath)) {
     console.error(`[LOI] Khong tim thay tep gate status tai: ${filePath}`);
-    console.error(`Goi y: Hay chay 'node tools/gate.js init <tep_cau_hoi>' de khoi tao.`);
+    console.error(`Goi y: Hay chay 'node qa-system/tools/gate.js init <tep_cau_hoi>' de khoi tao.`);
     process.exit(1);
   }
 
@@ -152,7 +152,7 @@ function cmdInit(args) {
   const sourcePath = args[0];
   if (!sourcePath) {
     console.error('[LOI] Thieu duong dan tep cau hoi.');
-    console.error('Cu phap: node tools/gate.js init <duong_dan_tep_cau_hoi.md_hoac_json>');
+    console.error('Cu phap: node qa-system/tools/gate.js init <duong_dan_tep_cau_hoi.md_hoac_json>');
     process.exit(1);
   }
 
@@ -235,7 +235,7 @@ function cmdCheck() {
     console.error('QUY TAC: Tuyet doi khong tiep tuc phan tich hoac sinh');
     console.error('Expected Results cho den khi tat ca cau hoi duoc giai quyet.');
     console.error('Hay cap nhat cau tra loi bang cach sua file gate_status.json');
-    console.error('hoac dung lenh: node tools/gate.js answer --id <ID> --answer <TRA_LOI> --by <NGUOI_TRA_LOI>');
+    console.error('hoac dung lenh: node qa-system/tools/gate.js answer --id <ID> --answer <TRA_LOI> --by <NGUOI_TRA_LOI>');
     console.error('========================================================');
     process.exit(1);
   } else {
@@ -276,7 +276,7 @@ function cmdAnswer(args) {
 
   if (!id || !answer) {
     console.error('[LOI] Thieu tham so --id hoac --answer.');
-    console.error('Cu phap: node tools/gate.js answer --id <ID> --answer <NOI_DUNG> [--by <TEN>]');
+    console.error('Cu phap: node qa-system/tools/gate.js answer --id <ID> --answer <NOI_DUNG> [--by <TEN>]');
     process.exit(1);
   }
 
@@ -344,10 +344,10 @@ function main() {
       break;
     default:
       console.log('Cac lenh kha dung:');
-      console.log('  node tools/gate.js init <duong_dan_tep_cau_hoi>');
-      console.log('  node tools/gate.js check');
-      console.log('  node tools/gate.js answer --id <ID> --answer <NOI_DUNG> [--by <TEN>]');
-      console.log('  node tools/gate.js status');
+      console.log('  node qa-system/tools/gate.js init <duong_dan_tep_cau_hoi>');
+      console.log('  node qa-system/tools/gate.js check');
+      console.log('  node qa-system/tools/gate.js answer --id <ID> --answer <NOI_DUNG> [--by <TEN>]');
+      console.log('  node qa-system/tools/gate.js status');
       break;
   }
 }

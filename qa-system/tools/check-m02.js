@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-// Kiểm qa-analyst/ sau khi tách prompt thành AGENTS.md + SKILL.md.
-// Chạy ở gốc repo: node tools/check-m02.js
+// Kiểm qa-system/qa-analyst/ sau khi tách prompt thành AGENTS.md + SKILL.md.
+// Chạy ở gốc repo: node qa-system/tools/check-m02.js
 // Exit 0 khi mọi check PASS, exit 1 khi có FAIL.
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = path.join(process.cwd(), 'qa-analyst');
+const ROOT = path.join(process.cwd(), 'qa-system', 'qa-analyst');
 const ARCHIVE = path.join(ROOT, '_archive', 'prompt_qa_analyst_v1.md');
 const FILES = [
   'AGENTS.md',
@@ -31,7 +31,9 @@ const META = {
 };
 
 const read = (rel) => {
-  const p = path.join(ROOT, rel);
+  const p = rel === 'knowledge/voucher-domain.md'
+    ? path.join(process.cwd(), rel)
+    : path.join(ROOT, rel);
   return fs.existsSync(p) ? fs.readFileSync(p, 'utf8').normalize('NFC').replace(/\r\n/g, '\n') : null;
 };
 const norm = (l) => l.trim().replace(/\s+/g, ' ');
@@ -48,8 +50,8 @@ check('C01', 'Đủ 9 file đúng đường dẫn', () => {
 });
 
 check('C02', 'Prompt cũ đã chuyển vào _archive', () => {
-  if (!fs.existsSync(ARCHIVE)) return 'Không thấy qa-analyst/_archive/prompt_qa_analyst_v1.md';
-  if (fs.existsSync(path.join(ROOT, 'prompt_qa_analyst.md'))) return 'qa-analyst/prompt_qa_analyst.md vẫn còn';
+  if (!fs.existsSync(ARCHIVE)) return 'Không thấy qa-system/qa-analyst/_archive/prompt_qa_analyst_v1.md';
+  if (fs.existsSync(path.join(ROOT, 'prompt_qa_analyst.md'))) return 'qa-system/qa-analyst/prompt_qa_analyst.md vẫn còn';
   return '';
 });
 
@@ -122,7 +124,7 @@ check('C09', 'K5 — Có quy tắc đặt ID và mã X', () => {
 check('C10', 'K6 — Ràng buộc 4 không còn trỏ resources/ làm nguồn', () => {
   const t = read('AGENTS.md') || '';
   if (/Không phụ thuộc vào thư mục `resources\/`/.test(t)) return 'Vẫn là ràng buộc 4 cũ';
-  return /^4\. .*qa-analyst\//m.test(t) ? '' : 'Ràng buộc 4 phải nói tri thức nằm trong qa-analyst/';
+  return /^4\. .*qa-system\//m.test(t) ? '' : 'Ràng buộc 4 phải nói tri thức nằm trong qa-system/';
 });
 
 check('C11', 'AGENTS.md trỏ đủ 5 skill và tri thức ngành', () => {
@@ -137,7 +139,7 @@ check('C12', 'Không có emoji', () => {
   return bad.length ? 'Có emoji ở: ' + bad.join(', ') : '';
 });
 
-console.log('KIỂM TRA qa-analyst/');
+console.log('KIỂM TRA qa-system/qa-analyst/');
 console.log('--------------------------------------------------');
 for (const r of results) {
   console.log(`${r.ok ? 'PASS' : 'FAIL'}  ${r.id}  ${r.name}`);

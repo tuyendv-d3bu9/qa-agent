@@ -9,7 +9,7 @@ description: Gom rule đã xác nhận của dự án từ INPUT/ và gate_statu
 
 Chạy cuối Pha 2, sau skill `requirement-autopsy-report`.
 
-Đọc: `INPUT/` (chỉ file .md), `gate_status.json`, `OUTPUT/requirement_autopsy_report.md`.
+Đọc: `INPUT/` (chỉ file .md), `gate_status.json`, `OUTPUT/requirement_autopsy_report.md`, `knowledge/_project.md`, `knowledge/_glossary.md`.
 
 ## Cách làm
 
@@ -29,4 +29,4 @@ Chạy cuối Pha 2, sau skill `requirement-autopsy-report`.
 
 ## Đầu ra
 
-Dùng khuôn `assets/project_knowledge.md`, ghi `OUTPUT/project_knowledge.md`.
+Dùng khuôn `qa-system/templates/knowledge/_template.md`, ghi `knowledge/features/voucher.md`.

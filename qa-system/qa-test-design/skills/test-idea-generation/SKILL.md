@@ -1,20 +1,21 @@
 ---
 name: test-idea-generation
-description: Sinh test idea một câu (điều kiện → kết quả), mỗi idea có nguồn BR-xx, Q-xxx-xx hoặc VP-xx và nhãn lọc đề xuất, xuất OUTPUT/test_ideas.md. Dùng ở bước Test Idea của Pha 3, sau bước Viewpoint và trước điểm dừng để người duyệt cột Lọc; đọc OUTPUT/viewpoints.md, OUTPUT/requirement_autopsy_report.md, INPUT/ và knowledge/viewpoints.md.
+description: Sinh test idea một câu (điều kiện → kết quả), mỗi idea có nguồn BR-xx, Q-xxx-xx hoặc VP-xx và nhãn lọc đề xuất, xuất OUTPUT/test_ideas.md. Dùng ở Bước 3 (Test Idea Generation) của qa-test-design, sau bước risk-based-coverage và trước điểm dừng để người duyệt cột Lọc; đọc OUTPUT/viewpoints.md, OUTPUT/coverage_strategy.md, knowledge/features/voucher.md, INPUT/ và knowledge/viewpoints.md.
 ---
 
 # Sinh test idea
 
 ## Mục đích
 
-Sinh nhiều tình huống cần test, mỗi tình huống có nguồn rõ ràng. Sau đó người lọc lại trước khi viết test case.
+Sinh nhiều tình huống cần test, mỗi tình huống có nguồn rõ ràng, tập trung vào các vùng rủi ro cao. Sau đó người lọc lại trước khi viết test case.
 
 ## Đầu vào, đầu ra
 
 | | File | Lấy gì |
 |---|---|---|
 | Đầu vào | `OUTPUT/viewpoints.md` | 8 viewpoint, điểm chưa rõ của từng viewpoint |
-| Đầu vào | `OUTPUT/requirement_autopsy_report.md` | Phần B: rule đã xác nhận |
+| Đầu vào | `OUTPUT/coverage_strategy.md` | Vùng rủi ro P1, P2 để ưu tiên tập trung |
+| Đầu vào | `knowledge/features/voucher.md` | Rule đã chốt của Function D |
 | Đầu vào | `INPUT/` | Rule gốc của Function D |
 | Đầu ra | `OUTPUT/test_ideas.md` | Danh sách idea đã lọc |
 
@@ -31,7 +32,7 @@ Danh sách viewpoint: xem `knowledge/viewpoints.md`.
 ## Chuỗi làm việc
 
 ```
-Requirement → Viewpoint → Test idea → Người lọc → Test case
+Requirement → Viewpoint → Coverage Strategy (P1/P2) → Test idea → Người lọc → Test case
 ```
 
 ## Lấy idea từ đâu
