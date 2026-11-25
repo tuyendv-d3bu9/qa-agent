@@ -26,7 +26,7 @@ Ví dụ cùng 1 rủi ro "mã hết hạn giữa lúc checkout":
 |---|---|---|
 | Đầu vào | OUTPUT/coverage_strategy.md | Vùng rủi ro P1, P2 |
 | Đầu vào | knowledge/features/voucher.md | Rule đã chốt, mâu thuẫn còn mở |
-| Đầu vào | knowledge/features/goi-y-voucher.md | Tính năng giả định, cho charter Gợi ý Voucher Thông minh |
+| Đầu vào | OUTPUT/sut_profile.md | Các màn đã đi qua trên website, để ghi Area |
 | Đầu ra | OUTPUT/exploratory_charters.md | Các charter |
 
 ## Cấu trúc 1 charter

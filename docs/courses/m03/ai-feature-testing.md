@@ -8,13 +8,13 @@ Tính năng có AI không trả một kết quả cố định. Không test bằ
 
 Gợi ý Voucher Thông minh: AI đề xuất mã giảm giá phù hợp dựa trên giỏ hàng và lịch sử mua. ShopGo thật chưa có tính năng này.
 
-Mô tả cho agent đọc nằm ở knowledge/features/goi-y-voucher.md (agent không đọc docs/). Hành vi mong đợi GA-01 đến GA-04 là nguồn của Tiêu chí đạt.
+Tính năng nằm ở trang chủ website ShopGo. Agent mở URL trong knowledge/_sut.json bằng Playwright MCP để xem tính năng thật.
 
 ## Đầu vào, đầu ra
 
 | | File | Lấy gì |
 |---|---|---|
-| Đầu vào | knowledge/features/goi-y-voucher.md | Mô tả, hành vi mong đợi GA-01 đến GA-04, điểm chưa rõ |
+| Đầu vào | knowledge/_sut.json | URL website, để mở trang chủ xem tính năng |
 | Đầu ra | OUTPUT/ai_feature_tests.md | Test case theo 4 trục |
 
 ## 4 trục kiểm

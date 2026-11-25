@@ -2,9 +2,12 @@
 
 ## Tổng quan
 
-M03 có 6 bài. Phần 1 (3 bài) đã xong. Phần 2 (3 bài) làm tiếp, tạo thêm 2 agent mới.
+M03 có 6 bài. Phần 1 (3 bài) đã xong. Phần 2 làm tiếp: trước tiên khai môi trường test (sut-profile), sau đó 3 bài còn lại.
 
 ```
+qa-analyst
+  riêng                sut-profile              knowledge/_sut.json, OUTPUT/sut_profile.md   Phần 2
+
 qa-test-design
   1 viewpoint
   2 rủi ro             risk-based-coverage      OUTPUT/coverage_strategy.md       Phần 1
@@ -127,7 +130,7 @@ File đã có mà muốn chạy lại thì thêm chữ "làm lại".
 
 # Phần 2
 
-3 bài này khác nhau ở chỗ làm trên gì và ai làm:
+Phần 2 bắt đầu bằng khai môi trường test. Sau đó 3 bài khác nhau ở chỗ làm trên gì và ai làm:
 
 | Bài | Làm trên gì | Ai làm | Agent |
 |---|---|---|---|
@@ -136,37 +139,83 @@ File đã có mà muốn chạy lại thì thêm chữ "làm lại".
 | screenshot-analysis | Màn hình Checkout | Agent tìm lỗi giao diện, người kiểm lại bằng mắt | qa-ui-review (mới) |
 
 Nguyên liệu có sẵn:
-- knowledge/features/goi-y-voucher.md: mô tả tính năng giả định, hành vi mong đợi GA-01 đến GA-04.
+- docs/courses/m03/sut-profile.md: bài khai môi trường test.
+
+## C0. Môi trường test
+
+Làm trước 3 bài còn lại. URL khai 1 lần ở knowledge/_sut.json, các bài sau đọc lại.
+
+### 9. Viết file môi trường
+
+Người dạy tạo INPUT/moi-truong.md:
+
+```
+# Môi trường test
+
+- Tên hệ thống: ShopGo
+- URL: <điền link website>
+- Ghi chú: <điền nếu có>
+```
+
+### 10. Skill sut-profile
+
+```
+Đọc docs/courses/m03/sut-profile.md. Làm thành skill sut-profile cho qa-analyst. Skill này đứng riêng, không nằm trong Pha 1, cổng gate, Pha 2.
+Chưa tạo file. Đề xuất: thư mục, description viết bằng lời thường, mục nào chép nguyên văn, mục nào phải sửa, dòng thêm vào AGENTS.md của qa-analyst và AGENTS.md gốc.
+```
+
+Khi bàn, để ý:
+- Bảng Kỹ năng của qa-analyst thêm dòng: người dùng nói về môi trường, URL, web test thì dùng sut-profile.
+- Pha 1 bỏ qua INPUT/moi-truong.md, không sinh câu hỏi BA về file này.
+- AGENTS.md gốc thêm ngoại lệ: skill sut-profile được ghi knowledge/_sut.json. Thêm quy tắc: URL chỉ lấy từ knowledge/_sut.json, không tự đoán.
+- Khuôn lấy từ qa-system/templates/knowledge/_sut.json, giữ đúng tên trường.
+- Cần Playwright MCP để mở web.
+
+```
+Làm theo đề xuất đã chốt. Chạy node qa-system/tools/check-m02.js, phải 12/12 PASS.
+```
+
+### 11. Chạy sut-profile
+
+```
+Đọc AGENTS.md. Lấy thông tin môi trường test.
+```
+
+Agent dừng chờ duyệt. Người mở OUTPUT/sut_profile.md, kiểm từng dòng có nguồn, mở web xem lại nếu cần. Đúng thì:
+
+```
+Đã duyệt OUTPUT/sut_profile.md.
+```
 
 ## C. Dựng skill và agent
 
-### 9. Skill ai-feature-testing
+### 12. Skill ai-feature-testing
 
 ```
 Đọc docs/courses/m03/ai-feature-testing.md. Làm thành skill ai-feature-testing cho qa-test-design. Skill này nằm ngoài luồng 7 bước, chỉ chạy khi test tính năng có AI.
 Chưa tạo file. Đề xuất: thư mục, description viết bằng lời thường, mục nào chép nguyên văn, mục nào phải sửa, và dòng thêm vào AGENTS.md của qa-test-design.
 ```
 
-Khi bàn, để ý: tiêu chí đạt lấy từ GA-01 đến GA-04 trong knowledge/features/goi-y-voucher.md, mọi test gắn [GIẢ ĐỊNH]. Ví dụ "Gợi ý mã SALE-A102" là kiểu sai, không dùng làm dữ liệu.
+Khi bàn, để ý: tính năng nằm ở trang chủ website, agent mở URL trong knowledge/_sut.json bằng Playwright MCP để xem. Tiêu chí đạt viết theo 4 trục trong bài; chỗ nào web không thể hiện và không có tài liệu thì ghi [CAN_DU_LIEU]. Ví dụ "Gợi ý mã SALE-A102" là kiểu sai, không dùng làm dữ liệu.
 
 ```
 Làm theo đề xuất đã chốt. Không làm gì khác.
 ```
 
-### 10. Agent qa-automation và skill exploratory-charter
+### 13. Agent qa-automation và skill exploratory-charter
 
 ```
 Đọc docs/courses/m03/exploratory-charter.md. Tạo agent mới qa-system/qa-automation, skill đầu tiên là exploratory-charter, đọc OUTPUT/coverage_strategy.md.
 Chưa tạo file. Đề xuất: AGENTS.md của agent (vai trò, đầu vào, nhận việc, ràng buộc), SKILL.md, khuôn đầu ra, dòng thêm vào AGENTS.md gốc.
 ```
 
-Khi bàn, để ý: charter do người chạy, không viết step, không sinh code, mỗi charter 1 rủi ro. Mission viết theo mẫu "Khám phá [đối tượng] để phát hiện [vấn đề]". Charter Gợi ý Voucher Thông minh đọc knowledge/features/goi-y-voucher.md, gắn [GIẢ ĐỊNH].
+Khi bàn, để ý: charter do người chạy, không viết step, không sinh code, mỗi charter 1 rủi ro. Mission viết theo mẫu "Khám phá [đối tượng] để phát hiện [vấn đề]". Area ghi theo các màn trong OUTPUT/sut_profile.md.
 
 ```
 Làm theo đề xuất đã chốt. Không làm gì khác.
 ```
 
-### 11. Agent qa-ui-review và skill screenshot-analysis
+### 14. Agent qa-ui-review và skill screenshot-analysis
 
 ```
 Đọc docs/courses/m03/screenshot-analysis.md. Tạo agent mới qa-system/qa-ui-review, skill screenshot-analysis.
@@ -183,19 +232,19 @@ Làm theo đề xuất đã chốt. Không làm gì khác.
 
 ## D. Chạy
 
-### 12. Test tính năng AI
+### 15. Test tính năng AI
 
 ```
 Đọc AGENTS.md. Viết test cho tính năng Gợi ý Voucher Thông minh.
 ```
 
-### 13. Exploratory charter
+### 16. Exploratory charter
 
 ```
 Đọc AGENTS.md. Viết exploratory charter cho các vùng rủi ro để nhóm test tay đi khám phá.
 ```
 
-### 14. Review giao diện
+### 17. Review giao diện
 
 ```
 <người dạy tự điền link website và câu lệnh>
@@ -207,11 +256,12 @@ Agent dừng ở cổng QA. Người kiểm từng dòng trong OUTPUT/ui_review.
 Đã kiểm xong OUTPUT/ui_review.md. Tóm tắt các vấn đề đã xác nhận, xếp theo mức CAO, TB, THAP.
 ```
 
-### 15. Kiểm
+### 18. Kiểm
 
 | # | Đúng khi |
 |---|---|
-| 1 | ai_feature_tests.md: đủ 4 trục OUTPUT_LOGIC, BIAS, FALLBACK, LATENCY; tiêu chí đạt là tiêu chí, không phải 1 mã cụ thể; có nguồn GA-xx |
+| 0 | knowledge/_sut.json có url lấy từ INPUT/moi-truong.md, đúng tên trường của khuôn; sut_profile.md dòng nào cũng có nguồn |
+| 1 | ai_feature_tests.md: đủ 4 trục OUTPUT_LOGIC, BIAS, FALLBACK, LATENCY; tiêu chí đạt là tiêu chí, không phải 1 mã cụ thể |
 | 2 | Test BIAS giữ nguyên giỏ, chỉ đổi thông tin khách |
 | 3 | exploratory_charters.md: mỗi charter 1 rủi ro, vùng P1 nào cũng có charter, có charter Gợi ý Voucher Thông minh, không có step |
 | 4 | Time-box là 30, 45 hoặc 60 phút |
