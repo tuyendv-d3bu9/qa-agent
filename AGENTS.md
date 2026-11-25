@@ -32,7 +32,7 @@
 | qa-test-design | Phân tích chuẩn và coverage cho toàn bộ testcase: phân tích viewpoint, chiến lược rủi ro P1–P3, sinh test idea, viết test case Jira/TestRail và review độ phủ | Đọc qa-system/qa-test-design/AGENTS.md |
 
 ## Luồng
-INPUT, sau đó qa-analyst (Pha 1, cổng chặn, Pha 2), bàn giao sang qa-test-design (Viewpoint, Coverage Strategy, Test Idea -> người duyệt -> Test Case, Coverage Review).
+INPUT, sau đó qa-analyst (Pha 1, cổng chặn, Pha 2), bàn giao sang qa-test-design (Viewpoint, Coverage Strategy, Technique Selection, Boundary & Scenario, Test Idea -> người duyệt -> Test Case, Coverage Review).
 
 ## Quy tắc chung
 - Không đọc docs/.

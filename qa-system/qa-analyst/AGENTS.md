@@ -15,7 +15,7 @@ Nhiệm vụ trọng tâm của `qa-analyst` là đào sâu thông tin, bóc tá
 ## Nguồn sự thật
 
 - Nguồn sự thật duy nhất về hành vi hệ thống được quy định tại các tệp tài liệu định dạng Markdown (.md) nằm trong thư mục `INPUT/` (ví dụ: `INPUT/Spec Function D.md`, `INPUT/Hệ thống Thương mại điện tử “ShopGo”.md`).
-- Quy định tiền xử lý: Chỉ đọc các tệp `.md`. Tuyệt đối không đọc trực tiếp các tệp nhị phân hoặc phi Markdown (.docx, .pdf). Toàn bộ tệp .docx phải được chuyển đổi bằng công cụ nội bộ `tools/convert.js` trước khi phân tích.
+- Quy định tiền xử lý: Chỉ đọc các tệp `.md`. Tuyệt đối không đọc trực tiếp các tệp nhị phân hoặc phi Markdown (.docx, .pdf). Toàn bộ tệp .docx phải được chuyển đổi bằng công cụ nội bộ `qa-system/tools/convert.js` trước khi phân tích.
 
 ## Luồng làm việc và cổng chặn
 
@@ -28,11 +28,11 @@ Nhiệm vụ trọng tâm của `qa-analyst` là đào sâu thông tin, bóc tá
 [ XUẤT CÂU HỎI LÀM RÕ RA FILE: OUTPUT/questions_for_clarification.md ]
        │
        ▼
-[ KÍCH HOẠT CỔNG CHẶN: node tools/gate.js init OUTPUT/questions_for_clarification.md ]
+[ KÍCH HOẠT CỔNG CHẶN: node qa-system/tools/gate.js init OUTPUT/questions_for_clarification.md ]
        │
        ▼
 ╔══════════════════════════════════════════════════════════════════╗
-║ LỆNH KIỂM TRA BẮT BUỘC: node tools/gate.js check                 ║
+║ LỆNH KIỂM TRA BẮT BUỘC: node qa-system/tools/gate.js check                 ║
 ║                                                                  ║
 ║ - Nguồn kiểm tra: gate_status.json                               ║
 ║ - Nếu còn bất kỳ câu hỏi nào status = "UNRESOLVED":              ║
@@ -78,9 +78,9 @@ Báo cáo kết quả phải được xuất ra thư mục `OUTPUT/` theo từng
 | Pha | Skill | Dùng khi |
 |---|---|---|
 | Pha 1 | `skills/interrogation-6w/SKILL.md` | Tra hỏi tài liệu trong INPUT/ theo 6 góc W1–W6 để tìm điều chưa được nói rõ. Dùng ở Pha 1, trước khi viết câu hỏi làm rõ. |
-| Pha 1 | `skills/clarification-questions/SKILL.md` | Viết câu hỏi đóng gửi BA, đặt ID theo D-code và mã X cho mâu thuẫn, xuất OUTPUT/questions_for_clarification.md đúng định dạng tools/gate.js đọc được. Dùng ở cuối Pha 1. |
+| Pha 1 | `skills/clarification-questions/SKILL.md` | Viết câu hỏi đóng gửi BA, đặt ID theo D-code và mã X cho mâu thuẫn, xuất OUTPUT/questions_for_clarification.md đúng định dạng qa-system/tools/gate.js đọc được. Dùng ở cuối Pha 1. |
 | Pha 2 | `skills/missing-rule-classification/SKILL.md` | Xếp mỗi điểm có trạng thái MO_HO, KHONG_DE_CAP hoặc MAU_THUAN vào 1 trong 5 nhóm Missing Rule và gán mức rủi ro CAO, TB, THAP. Dùng ở Pha 2. |
-| Pha 2 | `skills/requirement-autopsy-report/SKILL.md` | Viết báo cáo Requirement Autopsy 4 phần A–D ra OUTPUT/requirement_autopsy_report.md. Chỉ dùng ở Pha 2, sau khi node tools/gate.js check trả về exit 0. |
+| Pha 2 | `skills/requirement-autopsy-report/SKILL.md` | Viết báo cáo Requirement Autopsy 4 phần A–D ra OUTPUT/requirement_autopsy_report.md. Chỉ dùng ở Pha 2, sau khi node qa-system/tools/gate.js check trả về exit 0. |
 | Pha 2 | `skills/fact-self-check/SKILL.md` | Tự kiểm báo cáo Pha 2 theo 10 tiêu chí FACT, ghi DAT hoặc KHONG_DAT kèm dẫn chứng. Dùng ở Pha 2, trước khi xuất báo cáo. |
 | Pha 2 | `skills/project-knowledge/SKILL.md` | Gom rule đã xác nhận của dự án từ INPUT/ và gate_status.json thành knowledge/features/voucher.md. Dùng cuối Pha 2, sau requirement-autopsy-report. |
 
@@ -104,7 +104,7 @@ Nhãn 6W (`CO`, `MOT_PHAN`, `KHONG`) chỉ dùng khi tra hỏi ở Pha 1.
 
 1. **Tuyệt đối không sử dụng emoji** trong toàn bộ quá trình giao tiếp, suy luận, tạo prompt và xuất báo cáo.
 2. **Không đọc tài liệu ngoài Markdown:** Tuyệt đối không để AI đọc các file .docx trong `INPUT/`. Nếu có file .docx, phải chạy `npm run convert` trước.
-3. **Chặn cứng cổng Gate:** Không được phép bước sang Pha 2 (phân tích chi tiết và viết Expected Result) nếu lệnh `node tools/gate.js check` trả về lỗi (exit code 1).
+3. **Chặn cứng cổng Gate:** Không được phép bước sang Pha 2 (phân tích chi tiết và viết Expected Result) nếu lệnh `node qa-system/tools/gate.js check` trả về lỗi (exit code 1).
 4. **Không đọc ngoài phạm vi agent:** Tri thức của agent nằm trong `qa-system/` và `knowledge/`. Không đọc `docs/`.
 5. **Giữ vững tính khách quan:** Không bao giờ khẳng định thông lệ ngành là quy định của dự án khi tài liệu `INPUT/` chưa nêu.
 6. **Ngôn ngữ:** Sử dụng 100% tiếng Việt chuẩn mực ngành kiểm thử phần mềm.

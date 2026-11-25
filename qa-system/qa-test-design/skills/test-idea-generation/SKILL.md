@@ -1,6 +1,6 @@
 ---
 name: test-idea-generation
-description: Sinh test idea một câu (điều kiện → kết quả), mỗi idea có nguồn BR-xx, Q-xxx-xx hoặc VP-xx và nhãn lọc đề xuất, xuất OUTPUT/test_ideas.md. Dùng ở Bước 3 (Test Idea Generation) của qa-test-design, sau bước risk-based-coverage và trước điểm dừng để người duyệt cột Lọc; đọc OUTPUT/viewpoints.md, OUTPUT/coverage_strategy.md, knowledge/features/voucher.md, INPUT/ và knowledge/viewpoints.md.
+description: Sinh test idea một câu (điều kiện → kết quả), mỗi idea có nguồn BR-xx, Q-xxx-xx hoặc VP-xx và nhãn lọc đề xuất, xuất OUTPUT/test_ideas.md. Dùng ở Bước 5 (Test Idea Generation) của qa-test-design, sau bước boundary-validation và trước điểm dừng để người duyệt cột Lọc; đọc OUTPUT/viewpoints.md, OUTPUT/coverage_strategy.md, knowledge/features/voucher.md, INPUT/ và knowledge/viewpoints.md.
 ---
 
 # Sinh test idea

@@ -1,6 +1,6 @@
 ---
 name: risk-based-coverage
-description: Đánh giá ma trận rủi ro (Khả năng x Mức ảnh hưởng), phân loại ưu tiên P1/P2/P3 cho các vùng rủi ro, đề xuất loại test, kỹ thuật và viewpoint cho vùng P1, xuất OUTPUT/coverage_strategy.md. Dùng ở Bước 2 của qa-test-design sau bước viewpoint-generator; đọc OUTPUT/requirement_autopsy_report.md, knowledge/features/voucher.md, OUTPUT/viewpoints.md và ghi OUTPUT/coverage_strategy.md.
+description: Gom các D-code thành vùng rủi ro, chấm mỗi vùng theo khả năng xảy ra và mức ảnh hưởng (có dấu hiệu làm căn cứ), tra ma trận ra P1, P2, P3 để biết chỗ nào test trước, test kỹ. Vùng P1 đề xuất thêm loại test, kỹ thuật và viewpoint; vùng còn mâu thuẫn thì ghi riêng, chưa viết Expected. Dùng ở Bước 2 của qa-test-design, sau khi có OUTPUT/viewpoints.md; đọc thêm OUTPUT/requirement_autopsy_report.md, knowledge/features/voucher.md và ghi OUTPUT/coverage_strategy.md.
 ---
 
 # Coverage theo rủi ro

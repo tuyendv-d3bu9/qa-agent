@@ -1,6 +1,6 @@
 ---
 name: clarification-questions
-description: Viết câu hỏi đóng gửi BA, đặt ID theo D-code và mã X cho mâu thuẫn, xuất OUTPUT/questions_for_clarification.md đúng định dạng tools/gate.js đọc được. Dùng ở cuối Pha 1.
+description: Viết câu hỏi đóng gửi BA, đặt ID theo D-code và mã X cho mâu thuẫn, xuất OUTPUT/questions_for_clarification.md đúng định dạng qa-system/tools/gate.js đọc được. Dùng ở cuối Pha 1.
 ---
 
 # Câu hỏi làm rõ
@@ -29,4 +29,4 @@ Thứ tự dòng: D01 đến D23, sau đó X01 trở đi.
 ## Đầu ra
 
 - Dùng khuôn `assets/questions_for_clarification.md`.
-- Ghi `OUTPUT/questions_for_clarification.md`, sau đó chạy `node tools/gate.js init OUTPUT/questions_for_clarification.md`.
+- Ghi `OUTPUT/questions_for_clarification.md`, sau đó chạy `node qa-system/tools/gate.js init OUTPUT/questions_for_clarification.md`.

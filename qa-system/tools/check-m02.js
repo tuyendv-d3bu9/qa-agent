@@ -36,7 +36,8 @@ const read = (rel) => {
     : path.join(ROOT, rel);
   return fs.existsSync(p) ? fs.readFileSync(p, 'utf8').normalize('NFC').replace(/\r\n/g, '\n') : null;
 };
-const norm = (l) => l.trim().replace(/\s+/g, ' ');
+// Bo qua tien to qa-system/ cua duong dan tools (doi o kich ban QA-SYSTEM buoc 3).
+const norm = (l) => l.trim().replace(/qa-system\/tools\//g, 'tools/').replace(/\s+/g, ' ');
 const results = [];
 const check = (id, name, fn) => {
   let msg = '';

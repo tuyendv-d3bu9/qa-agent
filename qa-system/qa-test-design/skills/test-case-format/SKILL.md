@@ -1,6 +1,6 @@
 ---
 name: test-case-format
-description: Chuyển idea có nhãn GIU trong OUTPUT/test_ideas.md thành test case đủ 8 trường, đọc thêm OUTPUT/requirement_autopsy_report.md và gate_status.json, xuất OUTPUT/test_cases.md và OUTPUT/test_cases.csv. Dùng ở bước Test Case của Pha 3, chỉ sau khi người duyệt cột Lọc của OUTPUT/test_ideas.md.
+description: Chuyển idea có nhãn GIU trong OUTPUT/test_ideas.md thành test case đủ 8 trường, đọc thêm OUTPUT/requirement_autopsy_report.md và gate_status.json, xuất OUTPUT/test_cases.md và OUTPUT/test_cases.csv. Dùng ở Bước 6 (Test Case) của qa-test-design, chỉ sau khi người duyệt cột Lọc của OUTPUT/test_ideas.md.
 ---
 
 # Chuẩn hóa test case

@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "convert": "node tools/convert.js",
-    "gate:init": "node tools/gate.js init",
-    "gate:check": "node tools/gate.js check",
-    "gate:status": "node tools/gate.js status",
+    "convert": "node qa-system/tools/convert.js",
+    "gate:init": "node qa-system/tools/gate.js init",
+    "gate:check": "node qa-system/tools/gate.js check",
+    "gate:status": "node qa-system/tools/gate.js status",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

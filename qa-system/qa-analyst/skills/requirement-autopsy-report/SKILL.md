@@ -1,13 +1,13 @@
 ---
 name: requirement-autopsy-report
-description: Viết báo cáo Requirement Autopsy 4 phần A–D ra OUTPUT/requirement_autopsy_report.md. Chỉ dùng ở Pha 2, sau khi node tools/gate.js check trả về exit 0.
+description: Viết báo cáo Requirement Autopsy 4 phần A–D ra OUTPUT/requirement_autopsy_report.md. Chỉ dùng ở Pha 2, sau khi node qa-system/tools/gate.js check trả về exit 0.
 ---
 
 # Báo cáo Requirement Autopsy
 
 ## Điều kiện
 
-Chỉ làm khi `node tools/gate.js check` trả về exit 0. Exit 1 thì dừng, không viết Expected Result.
+Chỉ làm khi `node qa-system/tools/gate.js check` trả về exit 0. Exit 1 thì dừng, không viết Expected Result.
 
 ## Cách làm
 
