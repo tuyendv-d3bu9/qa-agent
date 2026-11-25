@@ -9,6 +9,8 @@ Có những lỗi kịch bản viết sẵn không bắt được. Exploratory t
 | | File | Lấy gì |
 |---|---|---|
 | Đầu vào | OUTPUT/coverage_strategy.md | Vùng rủi ro P1, P2 |
+| Đầu vào | knowledge/features/voucher.md | Rule đã chốt, mâu thuẫn còn mở |
+| Đầu vào | knowledge/features/goi-y-voucher.md | Tính năng giả định, cho charter Gợi ý Voucher Thông minh |
 | Đầu ra | OUTPUT/exploratory_charters.md | Các charter |
 
 ## Cấu trúc 1 charter
@@ -25,7 +27,7 @@ Có những lỗi kịch bản viết sẵn không bắt được. Exploratory t
 
 1. Chọn vùng rủi ro P1 trước, sau đó P2.
 2. Mỗi charter 1 rủi ro. Không gộp.
-3. Có ít nhất 1 charter cho tính năng Gợi ý Voucher Thông minh.
+3. Có ít nhất 1 charter cho tính năng Gợi ý Voucher Thông minh, gắn [GIẢ ĐỊNH].
 4. Time-box chọn 30, 45 hoặc 60 phút.
 5. AI viết bản nháp, người chỉnh Mission và Time-box cho thực tế.
 
