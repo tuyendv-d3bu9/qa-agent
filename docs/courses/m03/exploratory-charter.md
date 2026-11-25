@@ -43,7 +43,7 @@ Ví dụ cùng 1 rủi ro "mã hết hạn giữa lúc checkout":
 
 1. Chọn vùng rủi ro P1 trước, sau đó P2.
 2. Mỗi charter 1 rủi ro. Không gộp.
-3. Có ít nhất 1 charter cho tính năng Gợi ý Voucher Thông minh, gắn [GIẢ ĐỊNH].
+3. Có ít nhất 1 charter cho tính năng Gợi ý Voucher Thông minh.
 4. Time-box chọn 30, 45 hoặc 60 phút.
 5. AI viết bản nháp, người chỉnh Mission và Time-box cho thực tế.
 

@@ -4,9 +4,9 @@
 
 Tính năng có AI không trả một kết quả cố định. Không test bằng cách so đúng một giá trị, mà kiểm theo tiêu chí.
 
-## Tính năng giả định
+## Tính năng
 
-Gợi ý Voucher Thông minh: AI đề xuất mã giảm giá phù hợp dựa trên giỏ hàng và lịch sử mua. ShopGo thật chưa có tính năng này.
+Gợi ý Voucher Thông minh: AI đề xuất mã giảm giá phù hợp dựa trên giỏ hàng và lịch sử mua.
 
 Tính năng nằm ở trang chủ website ShopGo. Agent mở URL trong knowledge/_sut.json bằng Playwright MCP để xem tính năng thật.
 

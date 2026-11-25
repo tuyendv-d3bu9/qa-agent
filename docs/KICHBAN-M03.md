@@ -17,13 +17,13 @@ qa-test-design
   6 test case
   7 coverage review
   riêng                ai-feature-testing       OUTPUT/ai_feature_tests.md        Phần 2
-
-qa-automation (mới)
-  exploratory-charter                           OUTPUT/exploratory_charters.md    Phần 2
+  riêng                exploratory-charter      OUTPUT/exploratory_charters.md    Phần 2
 
 qa-ui-review (mới)
   screenshot-analysis                           OUTPUT/ui_review.md               Phần 2
 ```
+
+exploratory-charter tạm đặt ở qa-test-design. Module 6 chuyển sang agent qa-automation.
 
 Mỗi skill chat 2 lần: lần 1 bàn, lần 2 làm. Bàn xong thấy đúng mới cho làm.
 
@@ -135,7 +135,7 @@ Phần 2 bắt đầu bằng khai môi trường test. Sau đó 3 bài khác nha
 | Bài | Làm trên gì | Ai làm | Agent |
 |---|---|---|---|
 | ai-feature-testing | Tính năng có AI bên trong (Gợi ý Voucher Thông minh) | Agent viết test theo tiêu chí | qa-test-design |
-| exploratory-charter | Vùng rủi ro | Agent viết bản định hướng, người chạy tay | qa-automation (mới) |
+| exploratory-charter | Vùng rủi ro | Agent viết bản định hướng, người chạy tay | qa-test-design (Module 6 chuyển sang qa-automation) |
 | screenshot-analysis | Màn hình Checkout | Agent tìm lỗi giao diện, người kiểm lại bằng mắt | qa-ui-review (mới) |
 
 Nguyên liệu có sẵn:
@@ -202,11 +202,11 @@ Khi bàn, để ý: tính năng nằm ở trang chủ website, agent mở URL tr
 Làm theo đề xuất đã chốt. Không làm gì khác.
 ```
 
-### 13. Agent qa-automation và skill exploratory-charter
+### 13. Skill exploratory-charter
 
 ```
-Đọc docs/courses/m03/exploratory-charter.md. Tạo agent mới qa-system/qa-automation, skill đầu tiên là exploratory-charter, đọc OUTPUT/coverage_strategy.md.
-Chưa tạo file. Đề xuất: AGENTS.md của agent (vai trò, đầu vào, nhận việc, ràng buộc), SKILL.md, khuôn đầu ra, dòng thêm vào AGENTS.md gốc.
+Đọc docs/courses/m03/exploratory-charter.md. Làm thành skill exploratory-charter cho qa-test-design, đọc OUTPUT/coverage_strategy.md. Skill này nằm ngoài luồng 7 bước.
+Chưa tạo file. Đề xuất: thư mục, description viết bằng lời thường, mục nào chép nguyên văn, mục nào phải sửa, dòng thêm vào bảng Kỹ năng và mục Nhận việc của qa-test-design.
 ```
 
 Khi bàn, để ý: charter do người chạy, không viết step, không sinh code, mỗi charter 1 rủi ro. Mission viết theo mẫu "Khám phá [đối tượng] để phát hiện [vấn đề]". Area ghi theo các màn trong OUTPUT/sut_profile.md.
