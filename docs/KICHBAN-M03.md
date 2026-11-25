@@ -133,11 +133,10 @@ File đã có mà muốn chạy lại thì thêm chữ "làm lại".
 |---|---|---|---|
 | ai-feature-testing | Tính năng có AI bên trong (Gợi ý Voucher Thông minh) | Agent viết test theo tiêu chí | qa-test-design |
 | exploratory-charter | Vùng rủi ro | Agent viết bản định hướng, người chạy tay | qa-automation (mới) |
-| screenshot-analysis | Website ShopGo | Agent tự mở web, chụp màn hình, tìm lỗi giao diện; người kiểm lại bằng mắt | qa-ui-review (mới) |
+| screenshot-analysis | Màn hình Checkout | Agent tìm lỗi giao diện, người kiểm lại bằng mắt | qa-ui-review (mới) |
 
 Nguyên liệu có sẵn:
 - knowledge/features/goi-y-voucher.md: mô tả tính năng giả định, hành vi mong đợi GA-01 đến GA-04.
-- Website ShopGo: https://cwshopgo.github.io, đưa vào câu lệnh ở bước 14.
 
 ## C. Dựng skill và agent
 
@@ -170,11 +169,11 @@ Làm theo đề xuất đã chốt. Không làm gì khác.
 ### 11. Agent qa-ui-review và skill screenshot-analysis
 
 ```
-Đọc docs/courses/m03/screenshot-analysis.md. Tạo agent mới qa-system/qa-ui-review, skill screenshot-analysis. Tôi sẽ đưa link website trong câu lệnh, agent tự mở web, tự chụp màn hình rồi phân tích.
+Đọc docs/courses/m03/screenshot-analysis.md. Tạo agent mới qa-system/qa-ui-review, skill screenshot-analysis.
 Chưa tạo file. Đề xuất: AGENTS.md của agent, SKILL.md, khuôn đầu ra, dòng thêm vào AGENTS.md gốc.
 ```
 
-Khi bàn, để ý: chỉ mở đúng link người dùng đưa, không tự đoán link. Agent cần công cụ mở trình duyệt và chụp màn hình (Playwright hoặc Chrome headless), ảnh lưu ở OUTPUT/screenshots/, mỗi dòng lỗi ghi tên ảnh. Không nhập dữ liệu thật, không đăng nhập bằng tài khoản thật. Không mở được web thì dừng, không tả màn hình. Chỉ nhận xét cái nhìn thấy trên ảnh. Cột "Đã kiểm bằng mắt" agent để KHONG, người điền CO.
+Khi bàn, để ý: chỉ nhận xét cái nhìn thấy trên ảnh. Cột "Đã kiểm bằng mắt" agent để KHONG, người điền CO.
 
 Phân tích phải có cổng QA, giống cổng gate ở qa-analyst: agent ghi xong OUTPUT/ui_review.md thì dừng, báo số dòng chờ kiểm. Người kiểm xong mới đi tiếp. Chỉ dòng CO được dùng tiếp (Module 5 viết bug report). Agent không tự điền CO, không tự xóa dòng.
 
@@ -196,13 +195,13 @@ Làm theo đề xuất đã chốt. Không làm gì khác.
 Đọc AGENTS.md. Viết exploratory charter cho các vùng rủi ro để nhóm test tay đi khám phá.
 ```
 
-### 14. Review giao diện website
+### 14. Review giao diện
 
 ```
-Đọc AGENTS.md. Vào https://cwshopgo.github.io, đi tới trang Checkout, chụp các màn hình trước khi nhập mã, áp mã thành công, áp mã lỗi. Tìm lỗi giao diện, accessibility và trải nghiệm.
+<người dạy tự điền link website và câu lệnh>
 ```
 
-Agent dừng ở cổng QA. Người mở từng ảnh trong OUTPUT/screenshots/, kiểm từng dòng trong OUTPUT/ui_review.md: đúng thì sửa cột "Đã kiểm bằng mắt" thành CO, không thấy trên ảnh thì xóa dòng. Dòng nào nghi ngờ thì mở lại website xem. Kiểm xong:
+Agent dừng ở cổng QA. Người kiểm từng dòng trong OUTPUT/ui_review.md: đúng thì sửa cột "Đã kiểm bằng mắt" thành CO, không thấy trên ảnh thì xóa dòng. Kiểm xong:
 
 ```
 Đã kiểm xong OUTPUT/ui_review.md. Tóm tắt các vấn đề đã xác nhận, xếp theo mức CAO, TB, THAP.

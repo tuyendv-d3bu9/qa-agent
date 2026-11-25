@@ -8,7 +8,7 @@
 
 | | File | Lấy gì |
 |---|---|---|
-| Đầu vào | Link website người dùng đưa trong câu lệnh | Agent tự mở web, tự chụp từ 2 màn hình Checkout trở lên, lưu ảnh ở OUTPUT/screenshots/ |
+| Đầu vào | Ảnh chụp màn hình Checkout | Từ 2 màn hình trở lên |
 | Đầu ra | OUTPUT/ui_review.md | Danh sách vấn đề |
 
 ## 3 nhóm vấn đề

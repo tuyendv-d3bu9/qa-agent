@@ -4,6 +4,22 @@
 
 Có những lỗi kịch bản viết sẵn không bắt được. Exploratory testing là test có chủ đích, có giới hạn thời gian, tập trung vào 1 rủi ro.
 
+Test case chỉ kiểm những đường người viết đã nghĩ tới trước. Lỗi hay nằm ở đường chưa ai nghĩ tới: mở 2 tab, bấm Back sau khi đặt hàng, tắt mã từ Admin lúc khách đang checkout. Charter giao cho tester một mục tiêu và một khoảng thời gian để đi tìm những đường đó.
+
+Charter không phải test case. Không có bước, không có Expected. Tester tự nghĩ ra bước trong lúc chạy, thấy lạ thì đào tiếp.
+
+| | Test case | Charter |
+|---|---|---|
+| Có bước | Có: bước 1 mở web, bước 2 vào trang, bước 3 điền gì | Không |
+| Có Expected | Có | Không, chỉ có Mission |
+| Ai nghĩ ra cách test | Người viết, trước khi chạy | Người chạy, trong lúc chạy |
+| Ai làm | qa-test-design | Agent viết charter, người chạy tay |
+| Bắt được | Lỗi ở đường đã biết | Lỗi ở đường chưa ai nghĩ tới |
+
+Ví dụ cùng 1 rủi ro "mã hết hạn giữa lúc checkout":
+- Test case: bước 1 áp mã, bước 2 đổi giờ qua 23:59:59, bước 3 bấm Đặt hàng, Expected: từ chối tạo đơn. Kiểm đúng 1 đường.
+- Charter: Khám phá việc mã mất hiệu lực giữa luồng checkout để phát hiện trường hợp vẫn đặt được đơn, 45 phút. Tester tự thử 2 tab, quay lại bước trước, mất mạng rồi vào lại.
+
 ## Đầu vào, đầu ra
 
 | | File | Lấy gì |
