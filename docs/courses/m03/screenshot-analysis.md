@@ -4,11 +4,15 @@
 
 Đưa ảnh màn hình cho AI tìm lỗi giao diện, lỗi accessibility, lỗi trải nghiệm. Người kiểm lại bằng mắt trước khi dùng.
 
+Agent qa-ui-review tự mở website bằng Playwright MCP, tự chụp màn hình rồi phân tích. URL lấy từ knowledge/_sut.json (bài sut-profile), không dán link vào câu lệnh, không tự đoán link.
+
 ## Đầu vào, đầu ra
 
 | | File | Lấy gì |
 |---|---|---|
-| Đầu vào | Ảnh chụp màn hình Checkout | Từ 2 màn hình trở lên |
+| Đầu vào | knowledge/_sut.json | URL website |
+| Đầu vào | OUTPUT/sut_profile.md | Các màn đã biết, cách đi tới Checkout |
+| Đầu ra | OUTPUT/ui_review/*.png | Ảnh agent tự chụp, từ 2 màn hình Checkout trở lên |
 | Đầu ra | OUTPUT/ui_review.md | Danh sách vấn đề |
 
 ## 3 nhóm vấn đề
@@ -21,16 +25,19 @@
 
 ## Cách làm
 
-1. Chụp màn hình rõ nét, đủ khung. Ghi tên màn hình và bước checkout.
-2. Đưa ảnh cho AI, yêu cầu chỉ nhận xét những gì nhìn thấy.
-3. Mỗi vấn đề ghi: vị trí, lý do, mức độ, đề xuất sửa.
-4. Người kiểm từng dòng bằng mắt. Dòng nào không thấy trên ảnh thì bỏ.
+1. Lấy URL trong knowledge/_sut.json. Không có URL hoặc không mở được web thì dừng, báo người dùng. Không tả màn hình khi chưa chụp được.
+2. Dùng Playwright MCP mở web, đi tới Checkout. Chụp từng trạng thái: trước khi nhập mã, áp mã thành công, áp mã lỗi. Ảnh rõ nét, đủ khung, lưu ở OUTPUT/ui_review/, tên file ghi màn hình và trạng thái.
+3. Xem từng ảnh, chỉ nhận xét những gì nhìn thấy trên ảnh.
+4. Mỗi vấn đề ghi: tên ảnh, vị trí, lý do, mức độ, đề xuất sửa.
+5. Ghi xong OUTPUT/ui_review.md thì dừng ở cổng QA, cột "Đã kiểm bằng mắt" để KHONG.
+6. Người kiểm từng dòng bằng mắt, điền CO. Dòng nào không thấy trên ảnh thì bỏ.
 
 ## Giới hạn
 
 - AI không thấy hover, animation, chuyển trang.
 - Ảnh mờ thì AI dễ bịa. Luôn kiểm lại bằng mắt.
 - AI không biết rule nghiệp vụ. Vấn đề về tiền, về rule thì không lấy từ bài này.
+- Khi tự đi trên web: không nhập dữ liệu cá nhân thật, không đăng nhập bằng tài khoản thật, không thanh toán thật. Mã giảm giá để thử lấy từ tài liệu hoặc người dùng đưa, không tự bịa.
 
 ## Khuôn đầu ra
 

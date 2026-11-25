@@ -222,7 +222,11 @@ Làm theo đề xuất đã chốt. Không làm gì khác.
 Chưa tạo file. Đề xuất: AGENTS.md của agent, SKILL.md, khuôn đầu ra, dòng thêm vào AGENTS.md gốc.
 ```
 
-Khi bàn, để ý: chỉ nhận xét cái nhìn thấy trên ảnh. Cột "Đã kiểm bằng mắt" agent để KHONG, người điền CO.
+Khi bàn, để ý:
+- Agent lấy URL trong knowledge/_sut.json, dùng Playwright MCP tự mở web, tự chụp các màn Checkout (trước khi nhập mã, áp mã thành công, áp mã lỗi). Ảnh lưu ở OUTPUT/ui_review/, mỗi dòng lỗi ghi tên ảnh.
+- Không có URL hoặc không mở được web thì dừng, không tả màn hình.
+- Không nhập dữ liệu thật, không đăng nhập tài khoản thật, không thanh toán thật. Mã giảm giá để thử không tự bịa.
+- Chỉ nhận xét cái nhìn thấy trên ảnh. Cột "Đã kiểm bằng mắt" agent để KHONG, người điền CO.
 
 Phân tích phải có cổng QA, giống cổng gate ở qa-analyst: agent ghi xong OUTPUT/ui_review.md thì dừng, báo số dòng chờ kiểm. Người kiểm xong mới đi tiếp. Chỉ dòng CO được dùng tiếp (Module 5 viết bug report). Agent không tự điền CO, không tự xóa dòng.
 
@@ -265,7 +269,7 @@ Agent dừng ở cổng QA. Người kiểm từng dòng trong OUTPUT/ui_review.
 | 2 | Test BIAS giữ nguyên giỏ, chỉ đổi thông tin khách |
 | 3 | exploratory_charters.md: mỗi charter 1 rủi ro, vùng P1 nào cũng có charter, có charter Gợi ý Voucher Thông minh, không có step |
 | 4 | Time-box là 30, 45 hoặc 60 phút |
-| 5 | ui_review.md: dòng nào cũng có vị trí, chỉ có 3 nhóm UI_INCONSISTENCY, ACCESSIBILITY, UX_PROBLEM, không có dòng về tiền hay rule nghiệp vụ |
+| 5 | ui_review.md: dòng nào cũng có tên ảnh và vị trí, ảnh có trong OUTPUT/ui_review/, chỉ có 3 nhóm UI_INCONSISTENCY, ACCESSIBILITY, UX_PROBLEM, không có dòng về tiền hay rule nghiệp vụ |
 | 6 | Agent dừng ở cổng QA, không tự điền CO. Sau khi người kiểm: mọi dòng còn lại là CO, dòng AI bịa đã bị xóa |
 | 7 | check-m02.js vẫn 12/12 PASS |
 
